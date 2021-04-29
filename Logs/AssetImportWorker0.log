@@ -745,3 +745,159 @@ System memory in use after: 94.4 MB.
 Unloading 33 unused Assets to reduce memory usage. Loaded Objects now: 2451.
 Total: 13.585200 ms (FindLiveObjects: 0.843600 ms CreateObjectMapping: 0.201900 ms MarkObjects: 5.420100 ms  DeleteObjects: 7.111900 ms)
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003536 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.35 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.617 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.12 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1916 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 98.5 MB.
+System memory in use after: 94.4 MB.
+
+Unloading 33 unused Assets to reduce memory usage. Loaded Objects now: 2454.
+Total: 16.932800 ms (FindLiveObjects: 0.892400 ms CreateObjectMapping: 0.411900 ms MarkObjects: 5.180000 ms  DeleteObjects: 10.443600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 6232.569205 seconds.
+  path: Assets/slimeScript.cs
+  artifactKey: Guid(90deaf08f3de45d49a310acd93b9c63a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/slimeScript.cs using Guid(90deaf08f3de45d49a310acd93b9c63a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13f802473439603080bfea4c231c7acd') in 0.058216 seconds
+  Import took 0.069287 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003068 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.14 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.417 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.08 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1916 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 98.5 MB.
+System memory in use after: 94.5 MB.
+
+Unloading 33 unused Assets to reduce memory usage. Loaded Objects now: 2457.
+Total: 16.934400 ms (FindLiveObjects: 0.908600 ms CreateObjectMapping: 0.261300 ms MarkObjects: 5.707900 ms  DeleteObjects: 10.050900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 132.011842 seconds.
+  path: Assets/slimeScript.cs
+  artifactKey: Guid(90deaf08f3de45d49a310acd93b9c63a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/slimeScript.cs using Guid(90deaf08f3de45d49a310acd93b9c63a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e65c91e082dc59708e8f719d02ec2f4b') in 0.019873 seconds
+  Import took 0.031531 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002951 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.21 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.966 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.06 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1916 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 98.6 MB.
+System memory in use after: 94.5 MB.
+
+Unloading 33 unused Assets to reduce memory usage. Loaded Objects now: 2460.
+Total: 12.290000 ms (FindLiveObjects: 1.396500 ms CreateObjectMapping: 0.576900 ms MarkObjects: 4.165100 ms  DeleteObjects: 6.146700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003078 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.13 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.054 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.74 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1916 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 98.7 MB.
+System memory in use after: 94.6 MB.
+
+Unloading 33 unused Assets to reduce memory usage. Loaded Objects now: 2463.
+Total: 14.602300 ms (FindLiveObjects: 0.562300 ms CreateObjectMapping: 0.103400 ms MarkObjects: 6.080200 ms  DeleteObjects: 7.852300 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 642.760586 seconds.
+  path: Assets/monsters/slime/stand.anim
+  artifactKey: Guid(4afb8bd40255f3e43ae4a43df1a92284) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/monsters/slime/stand.anim using Guid(4afb8bd40255f3e43ae4a43df1a92284) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af7660e58e5fb81ce64d6a7b67070d36') in 0.040267 seconds
+  Import took 0.051972 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.614976 seconds.
+  path: Assets/monsters/slime/slime.controller
+  artifactKey: Guid(b228eba64d3cb264fbbe114231893fbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/monsters/slime/slime.controller using Guid(b228eba64d3cb264fbbe114231893fbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee2cbcd42a0f49b881ae6f16f30b5752') in 0.016570 seconds
+  Import took 0.027271 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 575.749961 seconds.
+  path: Assets/monsters/slime/jump.anim
+  artifactKey: Guid(58791dcf22cbe6e489b3e0d6e80fe9a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/monsters/slime/jump.anim using Guid(58791dcf22cbe6e489b3e0d6e80fe9a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa2636b8f302c803d7187b7609423588') in 0.014838 seconds
+  Import took 0.020717 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.793798 seconds.
+  path: Assets/monsters/slime/hiy.anim
+  artifactKey: Guid(39c6405a9b0858b47b643c3e15ba4d2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/monsters/slime/hiy.anim using Guid(39c6405a9b0858b47b643c3e15ba4d2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5d86695b5cc533e2b1d796b6e6fa704') in 0.011145 seconds
+  Import took 0.015779 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.942695 seconds.
+  path: Assets/monsters/slime/hit.anim
+  artifactKey: Guid(39c6405a9b0858b47b643c3e15ba4d2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/monsters/slime/hit.anim using Guid(39c6405a9b0858b47b643c3e15ba4d2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a49b727dd73408b0a5e7c2ecd25d50eb') in 0.011675 seconds
+  Import took 0.016437 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.834565 seconds.
+  path: Assets/monsters/slime/die.anim
+  artifactKey: Guid(d51e88b2be8b0c5429ef02eb9a94523f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/monsters/slime/die.anim using Guid(d51e88b2be8b0c5429ef02eb9a94523f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95d178393b6ad908329a38ad2fb2b240') in 0.013581 seconds
+  Import took 0.018574 seconds .
+

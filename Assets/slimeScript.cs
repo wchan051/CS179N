@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class slimeScript : MonoBehaviour
 {
+    public Animator ani; 
     private void OnTriggerEnter(Collider other)
     {
         //if collider = player
