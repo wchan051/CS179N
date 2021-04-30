@@ -10016,7 +10016,7 @@ MonoBehaviour:
   - {fileID: 2070708199}
   - {fileID: 1206523283}
   - {fileID: 1857479247}
-  smoothing: 15
+  smoothing: 8
 --- !u!1 &2022145516
 GameObject:
   m_ObjectHideFlags: 0
