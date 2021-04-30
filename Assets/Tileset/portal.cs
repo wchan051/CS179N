@@ -8,7 +8,7 @@ public class portal : MonoBehaviour
     {
         /**
          if(//character entered and press space){
-            scene ++;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
          }
          * **/
     }
