@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class portal : MonoBehaviour
 {
-    void OnCollisionEnter(Collision collision)
+    public bool touched = false;
+    void OnCollisionEnter(Collision other)
     {
+        
         /**
-         if(//character entered and press space){
+         if(other.tag ==player && space down ){
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
          }
          * **/
