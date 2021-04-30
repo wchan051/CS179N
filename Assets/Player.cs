@@ -2,11 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Health : MonoBehaviour
+public class Player : MonoBehaviour
 {
+	public HealthBar healthBar;
+	public XpBar xpBar;
+
     public int maxHealth = 100;
 	public int currentHealth;
-	public HealthBar healthBar;
+
+	public int maxXp = 100;
+	public int currentXp;
+    public int level;
+
 	private int hpregencounter;
 	private bool iframe;
 
@@ -15,6 +22,9 @@ public class Health : MonoBehaviour
     {
 		currentHealth = maxHealth;
 		healthBar.SetMaxHealth(maxHealth);
+		level = 1;
+        currentXp = 0;
+		xpBar.SetMaxXp(maxXp);
 		hpregencounter = 0;
 		iframe = false;
     }
@@ -26,6 +36,11 @@ public class Health : MonoBehaviour
 		{
 			TakeDamage(10);
 		}
+
+		if(Input.GetKeyDown(KeyCode.X)) { //TO-DO: Change to happen on monster kill
+            GainXp(10);
+        }
+
 		if (!iframe && currentHealth < maxHealth) {
 			iframe = true;
 			currentHealth++; // alter for future use
@@ -57,4 +72,25 @@ public class Health : MonoBehaviour
 
 		healthBar.SetHealth(currentHealth);
 	}
+
+	void LevelUp(int exp) {
+        level++;
+		maxXp += 100;
+        xpBar.SetMaxXp(maxXp); //TO-DO: Add parabolic experience system
+		currentXp = exp;
+        //TO-DO: Add level up animation
+    }
+
+	public void GainXp(int xpGain)
+	{
+		int carryXp;
+		currentXp += xpGain;
+        if(currentXp >= maxXp) {
+            carryXp = currentXp % maxXp;
+			LevelUp(carryXp);
+        }
+		xpBar.SetXp(currentXp);
+        
+	}
+
 }

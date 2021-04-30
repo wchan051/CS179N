@@ -6,16 +6,18 @@ public class slimeScript : MonoBehaviour
 {
     public Animator ani; 
     private GameObject enemy;
-    private int slimecurrenthealth = 100;
+    private int slimecurrenthealth = 50;
     private bool iframe;
     private int fpscounter;
+    Player user;
     // public int player-experience;
     // Start is called before the first frame update
     void Start()
     {
-        slimecurrenthealth = 100;
+        slimecurrenthealth = 50;
         fpscounter = 0;
         iframe = true;
+        user = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         enemy = gameObject.transform.parent.gameObject;
     }
 
@@ -39,7 +41,7 @@ public class slimeScript : MonoBehaviour
         // // }
         if (slimecurrenthealth <= 0) {
             Destroy(enemy.gameObject);
-            // experience here
+            user.GainXp(110);
         }
         fpscounter++;
     }
