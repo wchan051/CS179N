@@ -78,6 +78,9 @@ public class Player : MonoBehaviour
 		maxXp += 100;
         xpBar.SetMaxXp(maxXp); //TO-DO: Add parabolic experience system
 		currentXp = exp;
+		maxHealth += 25;
+		healthBar.SetMaxHealth(maxHealth);
+		currentHealth = maxHealth;
         //TO-DO: Add level up animation
     }
 
