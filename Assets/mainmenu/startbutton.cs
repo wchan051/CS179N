@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
 public class startbutton : MonoBehaviour
 {
+    /*
     public bool pressed = false;
     // Start is called before the first frame update
     void Start()
@@ -15,10 +17,12 @@ public class startbutton : MonoBehaviour
     {
 
     }
-
-    void OnMouseDown()
+    */
+    public void PlayGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        pressed = true;
-    }
+        //pressed = true;
+    } 
+    
+
 }
