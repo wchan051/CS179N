@@ -17,8 +17,10 @@ public class Player : MonoBehaviour
 	private int hpregencounter;
 	private bool iframe;
 
-    // Start is called before the first frame update
-    void Start()
+	Animator m_Anim;
+
+	// Start is called before the first frame update
+	void Start()
     {
 		currentHealth = maxHealth;
 		healthBar.SetMaxHealth(maxHealth);
@@ -27,7 +29,8 @@ public class Player : MonoBehaviour
 		xpBar.SetMaxXp(maxXp);
 		hpregencounter = 0;
 		iframe = false;
-    }
+		m_Anim = GetComponent<Animator>();
+	}
 
     // Update is called once per frame
     void Update()
