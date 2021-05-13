@@ -8,17 +8,19 @@ public class slimeScript : MonoBehaviour
     private GameObject enemy;
     private int slimecurrenthealth = 50;
     private bool iframe;
-    private int fpscounter;
+    private int fpscounter, attackReset;
     Player user;
     // public int player-experience;
     // Start is called before the first frame update
     void Start()
     {
+        ani = GetComponent<Animator>();
         slimecurrenthealth = 50;
         fpscounter = 0;
+        attackReset = 0;
         iframe = true;
         user = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-        enemy = gameObject.transform.parent.gameObject;
+        enemy = gameObject.transform.gameObject;
     }
 
     // Update is called once per frame
@@ -39,24 +41,43 @@ public class slimeScript : MonoBehaviour
         // // if (slimecurrenthealth <= 0) {
         // //     this.transform.localScale = new Vector3 (0,0,0);
         // // }
-        if (slimecurrenthealth <= 0) {
-            Destroy(enemy.gameObject);
-            user.GainXp(110);
+        StartCoroutine(waiter());
+        if(ani.GetBool("isHit") == true) {
+            attackReset++;
+        }
+        if (ani.GetBool("isHit") == true && attackReset > 120) {
+            attackReset = 0;
+            ani.SetBool("isHit", false);
         }
         fpscounter++;
     }
     private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.name == "CharacterRobotBoy") {
-            if (iframe) {
+            if (iframe && slimecurrenthealth > 0) {
+                ani.SetBool("isHit", true);
                 slimecurrenthealth -= 10;
+                Debug.Log(slimecurrenthealth);
                 iframe = false;
                 Debug.Log("health reduced");
+
             }
         } 
         if (fpscounter > 900) {
             fpscounter = 0;
             iframe = true;   
         }
+    }
+
+    IEnumerator waiter() {
+        Debug.Log("waiting");
+        if(slimecurrenthealth <= 0) {
+            Debug.Log("dead");
+            ani.SetBool("isDead", true);
+            yield return new WaitForSeconds(2);
+            Destroy(enemy.gameObject);
+            user.GainXp(110);
+            
+        }   
     }
     /*private void OnTriggerEnter(Collider other)
     {

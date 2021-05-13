@@ -7,12 +7,12 @@ public class Player : MonoBehaviour
 	public HealthBar healthBar;
 	public XpBar xpBar;
 
-    public int maxHealth = 100;
-	public int currentHealth;
+    static public int maxHealth = 100;
+	static public int currentHealth;
 
-	public int maxXp = 100;
-	public int currentXp;
-    public int level;
+	static public int maxXp = 100;
+	static public int currentXp;
+    static public int level;
 
 	private int hpregencounter;
 	private bool iframe;
@@ -34,14 +34,19 @@ public class Player : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {	
+		//Used for debugging
 		if (Input.GetKeyDown(KeyCode.Z))
 		{
 			TakeDamage(10);
 		}
-
-		if(Input.GetKeyDown(KeyCode.X)) { //TO-DO: Change to happen on monster kill
+		//Used for debugging
+		if(Input.GetKeyDown(KeyCode.X)) {
             GainXp(10);
+        }
+
+		if(Input.GetKeyDown(KeyCode.Q)) { 
+            GetComponent<Animator>().Play("stab");
         }
 
 		if (!iframe && currentHealth < maxHealth) {
