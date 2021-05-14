@@ -1,48 +1,84 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
 	public HealthBar healthBar;
 	public XpBar xpBar;
-
+	
+	static public int totalXp;
     static public int maxHealth = 100;
 	static public int currentHealth;
-
-	static public int maxXp = 100;
+	static public int maxXp = 10;
 	static public int currentXp;
     static public int level;
+	public float vExpMod = 1.3f;
+	//text overlay
+	public GameObject levelText;
+	public GameObject xpText;
+	public GameObject questTracker;
 
 	private int hpregencounter;
 	private bool iframe;
-	static public int questcounter;
-
+	static public int questcounter; 
 	Animator m_Anim;
 
 	// Start is called before the first frame update
 	void Start()
     {
-		currentHealth = maxHealth;
+		
 		healthBar.SetMaxHealth(maxHealth);
-		level = 1;
-        currentXp = 0;
 		xpBar.SetMaxXp(maxXp);
+
+		if(SceneManager.GetActiveScene().name == "tutorial") {
+			currentHealth = maxHealth;
+			level = 1;
+        	currentXp = 0;
+			totalXp = 0;
+		}
+		else {
+			currentHealth = PlayerPrefs.GetInt("p_currentHealth");
+			level = PlayerPrefs.GetInt("p_level");
+        	currentXp = PlayerPrefs.GetInt("p_currentXp");
+			totalXp = PlayerPrefs.GetInt("p_totalXp");
+		
+		}
 		hpregencounter = 0;
 		iframe = false;
 		m_Anim = GetComponent<Animator>();
 		questcounter = 0;
+		levelText.GetComponent<Text>().text = "Lvl. " +  level;
+		xpText.GetComponent<Text>().text = currentXp +  "	/	 "  + maxXp;
+		questTracker.GetComponent<Text>().text = "Kill the slimes -		" + questcounter +   "	/	 5" ;
 	}
 
     // Update is called once per frame
     void Update()
     {	
-		//Used for debugging
+		PlayerPrefs.SetInt("p_currentHealth",currentHealth);
+		PlayerPrefs.SetInt("p_level",level);
+		PlayerPrefs.SetInt("p_currentXp",currentXp);
+		PlayerPrefs.SetInt("p_totalXp",totalXp);
+		PlayerPrefs.SetInt("p_maxXp",maxXp);
+
+		xpText.GetComponent<Text>().text = currentXp +  "	/	 "  + maxXp;
+		xpBar.SetXp(currentXp);
+		//Used for debugging(take 10 damage)
 		if (Input.GetKeyDown(KeyCode.Z))
 		{
 			TakeDamage(10);
 		}
-		//Used for debugging
+
+		//Replace with health potions
+		if (Input.GetKeyDown(KeyCode.C))
+		{
+			Heal(20);
+		}
+
+		//Used for debugging(gain 10 xp)
 		if(Input.GetKeyDown(KeyCode.X)) {
             GainXp(10);
         }
@@ -54,7 +90,7 @@ public class Player : MonoBehaviour
 		if (!iframe && currentHealth < maxHealth) {
 			iframe = true;
 			currentHealth++; // alter for future use
-			Debug.Log("hpregen");
+			//Debug.Log("hpregen");
 			healthBar.SetHealth(currentHealth);
 		}
 		hpregencounter++;
@@ -64,9 +100,9 @@ public class Player : MonoBehaviour
 		}
 
 		if (questcounter >= 5) {
-			Debug.Log("Quest complete!");
-			GainXp(500);
+			GainXp(50);
 			questcounter = 0;
+			Invoke("QuestComplete", 2);
 		}
     }
 	private void OnCollisionEnter2D(Collision2D collision) {
@@ -87,16 +123,27 @@ public class Player : MonoBehaviour
 		currentHealth -= damage;
 		healthBar.SetHealth(currentHealth);
 	}
-
+	
+	void Heal (int heal) {
+		currentHealth += heal;
+		if(currentHealth > maxHealth) {
+			currentHealth = maxHealth;
+		}
+		healthBar.SetHealth(currentHealth);
+	}
 	public void questcounterincrementer(int counter) {
 		questcounter += counter;
+		questTracker.GetComponent<Text>().text = "Kill the slimes -		" + questcounter +   " 	/	 5" ;
 	}
 
 	void LevelUp(int exp) {
         level++;
-		maxXp += 100;
-        xpBar.SetMaxXp(maxXp); //TO-DO: Add parabolic experience system
+		levelText.GetComponent<Text>().text = "Lvl. " +  level;
+		float t = Mathf.Pow(vExpMod, level);
+        maxXp = (int)Mathf.Floor(10 * t) + 25;
+        xpBar.SetMaxXp(maxXp);
 		currentXp = exp;
+		xpBar.SetXp(currentXp);
 		maxHealth += 25;
 		healthBar.SetMaxHealth(maxHealth);
 		currentHealth = maxHealth;
@@ -106,11 +153,19 @@ public class Player : MonoBehaviour
 	public void GainXp(int xpGain)
 	{
 		int carryXp;
+
 		currentXp += xpGain;
-        if(currentXp >= maxXp) {
-            carryXp = currentXp % maxXp;
-			LevelUp(carryXp);
+		totalXp += xpGain;
+		
+    	while (currentXp >= maxXp) {
+			carryXp = currentXp - maxXp;
+			LevelUp(carryXp); 	
         }
+
 		xpBar.SetXp(currentXp);
+	}
+	
+	void QuestComplete () {
+		questTracker.GetComponent<Text>().text = "Quest complete! 50 Xp has been rewarded!";
 	}
 }

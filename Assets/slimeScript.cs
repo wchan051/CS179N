@@ -78,7 +78,8 @@ public class slimeScript : MonoBehaviour
             deadquestionmark = true;
             Debug.Log("dead");
             ani.SetBool("isDead", true);
-            user.GainXp(110);
+            user.GainXp(11);
+            user.questcounterincrementer(1);
             yield return new WaitForSeconds(3);
             enemy.gameObject.SetActive(false);
             Invoke("respawn", 5);
@@ -94,7 +95,6 @@ public class slimeScript : MonoBehaviour
         enemyrespawn.transform.position = respawnposition;
         Destroy(enemy.gameObject);
         enemyrespawn.SetActive(true);
-        user.questcounterincrementer(1);
         deadquestionmark = false;
         // user.GainXp(110);
     }
