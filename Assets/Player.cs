@@ -62,7 +62,7 @@ public class Player : MonoBehaviour
 		}
     }
 	private void OnCollisionEnter2D(Collision2D collision) {
-        if (collision.gameObject.name == "slime") {
+        if (collision.gameObject.tag == "slime") {
             if (iframe) {
                 TakeDamage(5);
                 iframe = false;

@@ -5,11 +5,12 @@ using UnityEngine;
 public class slimeScript : MonoBehaviour
 {
     public Animator ani; 
-    private GameObject enemy;
+    private GameObject enemy, enemyclone;
     private int slimecurrenthealth = 50;
     private bool iframe;
     private int fpscounter, attackReset;
     Player user;
+    Vector3 respawnposition;
     // public int player-experience;
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,8 @@ public class slimeScript : MonoBehaviour
         iframe = true;
         user = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         enemy = gameObject.transform.gameObject;
+        enemyclone = gameObject.transform.gameObject;
+        respawnposition = new Vector3(11,-4,0);
     }
 
     // Update is called once per frame
@@ -73,11 +76,22 @@ public class slimeScript : MonoBehaviour
         if(slimecurrenthealth <= 0) {
             Debug.Log("dead");
             ani.SetBool("isDead", true);
-            yield return new WaitForSeconds(2);
-            Destroy(enemy.gameObject);
-            user.GainXp(110);
-            
+            yield return new WaitForSeconds(3);
+            enemy.gameObject.SetActive(false);
+            Invoke("respawn", 5);
+            // GameObject enemyrespawn = (GameObject)Instantiate(enemyclone);
+            // enemyrespawn.transform.position = respawnposition;
+            // Destroy(enemy.gameObject);
+            // user.GainXp(110);
         }   
+    }
+
+    void respawn() {
+        GameObject enemyrespawn = (GameObject)Instantiate(enemyclone);
+        enemyrespawn.transform.position = respawnposition;
+        Destroy(enemy.gameObject);
+        enemyrespawn.SetActive(true);
+        user.GainXp(110);
     }
     /*private void OnTriggerEnter(Collider other)
     {
