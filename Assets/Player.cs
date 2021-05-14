@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
 
 	private int hpregencounter;
 	private bool iframe;
+	static public int questcounter;
 
 	Animator m_Anim;
 
@@ -30,6 +31,7 @@ public class Player : MonoBehaviour
 		hpregencounter = 0;
 		iframe = false;
 		m_Anim = GetComponent<Animator>();
+		questcounter = 0;
 	}
 
     // Update is called once per frame
@@ -60,6 +62,12 @@ public class Player : MonoBehaviour
 			iframe = false;
 			hpregencounter = 0;
 		}
+
+		if (questcounter >= 5) {
+			Debug.Log("Quest complete!");
+			GainXp(500);
+			questcounter = 0;
+		}
     }
 	private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.tag == "slime") {
@@ -77,8 +85,11 @@ public class Player : MonoBehaviour
 	void TakeDamage(int damage)
 	{
 		currentHealth -= damage;
-
 		healthBar.SetHealth(currentHealth);
+	}
+
+	public void questcounterincrementer(int counter) {
+		questcounter += counter;
 	}
 
 	void LevelUp(int exp) {
@@ -101,7 +112,5 @@ public class Player : MonoBehaviour
 			LevelUp(carryXp);
         }
 		xpBar.SetXp(currentXp);
-        
 	}
-
 }

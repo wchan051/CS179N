@@ -7,7 +7,7 @@ public class slimeScript : MonoBehaviour
     public Animator ani; 
     private GameObject enemy, enemyclone;
     private int slimecurrenthealth = 50;
-    private bool iframe;
+    private bool iframe, deadquestionmark;
     private int fpscounter, attackReset;
     Player user;
     Vector3 respawnposition;
@@ -24,6 +24,7 @@ public class slimeScript : MonoBehaviour
         enemy = gameObject.transform.gameObject;
         enemyclone = gameObject.transform.gameObject;
         respawnposition = new Vector3(11,-4,0);
+        deadquestionmark = false;
     }
 
     // Update is called once per frame
@@ -65,7 +66,7 @@ public class slimeScript : MonoBehaviour
 
             }
         } 
-        if (fpscounter > 900) {
+        if (fpscounter > 300) {
             fpscounter = 0;
             iframe = true;   
         }
@@ -73,9 +74,11 @@ public class slimeScript : MonoBehaviour
 
     IEnumerator waiter() {
         Debug.Log("waiting");
-        if(slimecurrenthealth <= 0) {
+        if(slimecurrenthealth <= 0 && !deadquestionmark) {
+            deadquestionmark = true;
             Debug.Log("dead");
             ani.SetBool("isDead", true);
+            user.GainXp(110);
             yield return new WaitForSeconds(3);
             enemy.gameObject.SetActive(false);
             Invoke("respawn", 5);
@@ -91,7 +94,9 @@ public class slimeScript : MonoBehaviour
         enemyrespawn.transform.position = respawnposition;
         Destroy(enemy.gameObject);
         enemyrespawn.SetActive(true);
-        user.GainXp(110);
+        user.questcounterincrementer(1);
+        deadquestionmark = false;
+        // user.GainXp(110);
     }
     /*private void OnTriggerEnter(Collider other)
     {
