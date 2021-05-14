@@ -27,21 +27,22 @@ public class ladder : MonoBehaviour
 
         RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, Vector2.up, distance, Ladder);
         if (hitInfo.collider != null)
-        {
-            if (Input.GetKeyDown(KeyCode.UpArrow))
-            {
+        {   
+            Debug.Log(hitInfo.collider.name);
+            if (Input.GetKeyDown(KeyCode.UpArrow)) {
                 isClimbing = true;
+            }
+            else {
+                isClimbing = false;
             }
         }
 
-        if (isClimbing)
-        {
+        if (isClimbing) {
             inputVertical = Input.GetAxisRaw("Vertical");
             rb.velocity = new Vector2(rb.position.x, inputVertical*speed);
             rb.gravityScale = 0;
         }
-        else
-        {
+        else {
             rb.gravityScale = 5;
         }
     }

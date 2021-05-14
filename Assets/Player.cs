@@ -8,7 +8,8 @@ public class Player : MonoBehaviour
 {
 	public HealthBar healthBar;
 	public XpBar xpBar;
-	
+
+	//data for exp,health,xp
 	static public int totalXp;
     static public int maxHealth = 100;
 	static public int currentHealth;
@@ -16,23 +17,25 @@ public class Player : MonoBehaviour
 	static public int currentXp;
     static public int level;
 	public float vExpMod = 1.3f;
+	private int hpregencounter;
+
 	//text overlay
 	public GameObject levelText;
 	public GameObject xpText;
 	public GameObject questTracker;
 
-	private int hpregencounter;
-	private bool iframe;
+	//quest
 	static public int questcounter; 
+
+	//misc
+	private bool iframe;
 	Animator m_Anim;
 
 	// Start is called before the first frame update
 	void Start()
     {
-		
 		healthBar.SetMaxHealth(maxHealth);
 		xpBar.SetMaxXp(maxXp);
-
 		if(SceneManager.GetActiveScene().name == "tutorial") {
 			currentHealth = maxHealth;
 			level = 1;
@@ -94,7 +97,7 @@ public class Player : MonoBehaviour
 			healthBar.SetHealth(currentHealth);
 		}
 		hpregencounter++;
-		if (hpregencounter > 3000) {
+		if (hpregencounter > 1500) {
 			iframe = false;
 			hpregencounter = 0;
 		}
@@ -111,7 +114,8 @@ public class Player : MonoBehaviour
                 TakeDamage(5);
                 iframe = false;
             }
-        } 
+        }
+
         if (hpregencounter > 900) {
             hpregencounter = 0;
             iframe = true;   
