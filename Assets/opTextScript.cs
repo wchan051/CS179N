@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class opTextScript : MonoBehaviour
 {
@@ -12,14 +13,27 @@ public class opTextScript : MonoBehaviour
 			"you wake up and find yourself in a strange new world";
 
 
-	public float delay = 0.1f;
+	public float delay = 0.025f;
 	public string fullText;
 	private string currentText = "";
+	bool done = false;
 
 	// Use this for initialization
 	void Start()
 	{
 		StartCoroutine(ShowText());
+	}
+
+	void Update()
+	{
+		if (Input.GetKeyDown("space"))
+		{
+			delay = 0.005f;
+		}
+        if (done && Input.GetKeyDown("space"))
+        {
+			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+		}
 	}
 
 	IEnumerator ShowText()
@@ -30,5 +44,6 @@ public class opTextScript : MonoBehaviour
 			this.GetComponent<Text>().text = currentText;
 			yield return new WaitForSeconds(delay);
 		}
+		done = true;
 	}
 }
