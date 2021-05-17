@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class opTextScript : MonoBehaviour
 {
 	
-        string intro = "pov ur a 24 y/o software engineer \n\n" +
+        string intro = "pov ur a 24 y/o videogame programmer \n\n" +
 			"after work you see a girl getting robbed and you run across \n" +
 			"the street to help\n\n" + "u get hit by a taxi\n\n" + "...\n\n" +
 			"you wake up and find yourself in a strange new world";
