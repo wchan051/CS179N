@@ -6,7 +6,7 @@ public class slimeScript : MonoBehaviour
 {
     public Animator ani; 
     private GameObject enemy, enemyclone;
-    private int slimecurrenthealth = 50;
+    public int health = 50;
     private bool iframe, deadquestionmark;
     private int fpscounter, attackReset;
     Player user;
@@ -16,7 +16,7 @@ public class slimeScript : MonoBehaviour
     void Start()
     {
         ani = GetComponent<Animator>();
-        slimecurrenthealth = 50;
+        health = 50;
         fpscounter = 0;
         attackReset = 0;
         iframe = true;
@@ -57,10 +57,10 @@ public class slimeScript : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.name == "CharacterRobotBoy") {
-            if (iframe && slimecurrenthealth > 0) {
+            if (iframe && health > 0) {
                 ani.SetBool("isHit", true);
-                slimecurrenthealth -= 10;
-                Debug.Log(slimecurrenthealth);
+                health -= 10;
+                Debug.Log(health);
                 iframe = false;
                 Debug.Log("health reduced");
 
@@ -74,7 +74,7 @@ public class slimeScript : MonoBehaviour
 
     IEnumerator waiter() {
         Debug.Log("waiting");
-        if(slimecurrenthealth <= 0 && !deadquestionmark) {
+        if(health <= 0 && !deadquestionmark) {
             deadquestionmark = true;
             Debug.Log("dead");
             ani.SetBool("isDead", true);
