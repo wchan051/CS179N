@@ -13434,7 +13434,7 @@ TilemapCollider2D:
   m_GameObject: {fileID: 1531367126}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: b4f740e3e6d435c40a969c5c4fc8ee51, type: 2}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -14400,6 +14400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  onstay: 0
 --- !u!1 &1571008610
 GameObject:
   m_ObjectHideFlags: 0
