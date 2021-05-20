@@ -45,6 +45,7 @@ public class storyline1 : MonoBehaviour
 			if(done4 ==1 && Input.GetKeyDown("space"))
 			{
 				this.GetComponent<Text>().text = "";
+				typing = false;
 			}
 			else if (done3 == 1 && Input.GetKeyDown("space"))
 			{
@@ -99,7 +100,7 @@ public class storyline1 : MonoBehaviour
 		{
 			done4 = 1;
 			PlayerPrefs.SetInt("done4", 1);
-			typing = false;
+			
 		}
 		showingText = false;
 	}
