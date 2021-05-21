@@ -8,7 +8,7 @@ public class slimeScript : MonoBehaviour
     private GameObject enemy, enemyclone;
     public int health = 50;
     private bool iframe, deadquestionmark;
-    private int fpscounter, attackReset;
+    private int fpscounter;
     Player user;
     Vector3 respawnposition;
     // public int player-experience;
@@ -18,7 +18,6 @@ public class slimeScript : MonoBehaviour
         ani = GetComponent<Animator>();
         health = 50;
         fpscounter = 0;
-        attackReset = 0;
         iframe = true;
         user = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         enemy = gameObject.transform.gameObject;
@@ -45,14 +44,6 @@ public class slimeScript : MonoBehaviour
         // // if (slimecurrenthealth <= 0) {
         // //     this.transform.localScale = new Vector3 (0,0,0);
         // // }
-        StartCoroutine(waiter());
-        if(ani.GetBool("isHit") == true) {
-            attackReset++;
-        }
-        if (ani.GetBool("isHit") == true && attackReset > 120) {
-            attackReset = 0;
-            ani.SetBool("isHit", false);
-        }
         fpscounter++;
 
         if (health <= 0)
@@ -80,14 +71,12 @@ public class slimeScript : MonoBehaviour
     }*/
 
     IEnumerator waiter() {
-        Debug.Log("waiting");
         if(health <= 0 && !deadquestionmark) {
             deadquestionmark = true;
-            Debug.Log("dead");
             ani.SetBool("isDead", true);
             user.GainXp(11);
             user.questcounterincrementer(1);
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(2);
             enemy.gameObject.SetActive(false);
             Invoke("respawn", 5);
             // GameObject enemyrespawn = (GameObject)Instantiate(enemyclone);

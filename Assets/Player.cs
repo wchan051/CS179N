@@ -31,7 +31,7 @@ public class Player : MonoBehaviour
 	//misc
 	private bool iframe;
 	Animator m_Anim;
-
+	public Animator enemy; 
 	// Start is called before the first frame update
 	void Start()
     {
@@ -125,11 +125,12 @@ public class Player : MonoBehaviour
 
 	void OnTriggerEnter2D(Collider2D col)
 	{
-		
 		if (col.gameObject.tag == "slime")
 		{
 			testing = true;
 			col.gameObject.GetComponent<slimeScript>().health -= damage;
+			enemy = col.gameObject.GetComponent<Animator>();
+			StartCoroutine(waiter());
 		}
 	}
 
@@ -183,4 +184,10 @@ public class Player : MonoBehaviour
 	void QuestComplete () {
 		questTracker.GetComponent<Text>().text = "Quest complete! 50 Xp has been rewarded!";
 	}
+	IEnumerator waiter() {
+		enemy.SetBool("isHit",true);
+		yield return new WaitForSeconds(1);
+		enemy.SetBool("isHit",false);
+	}
+	
 }
