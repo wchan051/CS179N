@@ -54,8 +54,15 @@ public class slimeScript : MonoBehaviour
             ani.SetBool("isHit", false);
         }
         fpscounter++;
+
+        if (health <= 0)
+        {
+            StartCoroutine(waiter());
+
+        }
     }
-    private void OnCollisionEnter2D(Collision2D collision) {
+    
+    /*private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.name == "CharacterRobotBoy") {
             if (iframe && health > 0) {
                 ani.SetBool("isHit", true);
@@ -70,7 +77,7 @@ public class slimeScript : MonoBehaviour
             fpscounter = 0;
             iframe = true;   
         }
-    }
+    }*/
 
     IEnumerator waiter() {
         Debug.Log("waiting");

@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
 {
 	public HealthBar healthBar;
 	public XpBar xpBar;
-
+	public bool testing = false;
 	//data for exp,health,xp
 	static public int totalXp;
     static public int maxHealth = 100;
@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
 	static public int maxXp = 10;
 	static public int currentXp;
     static public int level;
+	int damage = 10;
 	public float vExpMod = 1.3f;
 	private int hpregencounter;
 
@@ -121,6 +122,16 @@ public class Player : MonoBehaviour
             iframe = true;   
         }
     }
+
+	void OnTriggerEnter2D(Collider2D col)
+	{
+		
+		if (col.gameObject.tag == "slime")
+		{
+			testing = true;
+			col.gameObject.GetComponent<slimeScript>().health -= damage;
+		}
+	}
 
 	void TakeDamage(int damage)
 	{
