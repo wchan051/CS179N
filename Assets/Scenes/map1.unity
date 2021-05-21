@@ -339,7 +339,7 @@ GameObject:
   - component: {fileID: 262384985}
   m_Layer: 0
   m_Name: slime (4)
-  m_TagString: slime
+  m_TagString: slime2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -353,11 +353,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 262384984}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90deaf08f3de45d49a310acd93b9c63a, type: 3}
+  m_Script: {fileID: 11500000, guid: eea50ab8261bca44695e9cbbc027d70d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ani: {fileID: 262384986}
-  health: 50
+  health: 100
 --- !u!95 &262384986
 Animator:
   serializedVersion: 3
@@ -465,7 +465,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 27d24438fe8f2c343bbb48c64bc46d4d, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.91764706, g: 0.039215688, b: 0.039215688, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2164,7 +2164,7 @@ GameObject:
   - component: {fileID: 636728924}
   m_Layer: 0
   m_Name: slime
-  m_TagString: slime
+  m_TagString: slime2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2231,7 +2231,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 27d24438fe8f2c343bbb48c64bc46d4d, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9150943, g: 0.038848326, b: 0.038848326, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2249,7 +2249,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 636728918}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6, y: -4, z: 0}
+  m_LocalPosition: {x: 13, y: -6, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children:
   - {fileID: 1199310048}
@@ -2311,11 +2311,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 636728918}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90deaf08f3de45d49a310acd93b9c63a, type: 3}
+  m_Script: {fileID: 11500000, guid: eea50ab8261bca44695e9cbbc027d70d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ani: {fileID: 636728923}
-  health: 50
+  health: 100
 --- !u!1 &688174498
 GameObject:
   m_ObjectHideFlags: 0
@@ -2411,7 +2411,7 @@ GameObject:
   - component: {fileID: 702356140}
   m_Layer: 0
   m_Name: slime (5)
-  m_TagString: slime
+  m_TagString: slime2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2425,11 +2425,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 702356139}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90deaf08f3de45d49a310acd93b9c63a, type: 3}
+  m_Script: {fileID: 11500000, guid: eea50ab8261bca44695e9cbbc027d70d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ani: {fileID: 702356141}
-  health: 50
+  health: 100
 --- !u!95 &702356141
 Animator:
   serializedVersion: 3
@@ -2537,7 +2537,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 27d24438fe8f2c343bbb48c64bc46d4d, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.91764706, g: 0.039215688, b: 0.039215688, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2784,7 +2784,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 800319368}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f31ba80d81780ee43a259abd6cc5c748, type: 3}
+  m_Script: {fileID: 11500000, guid: f6937aada9bc1c7489da5f17a3ad9441, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   slime: {fileID: 1388157766}
@@ -2846,7 +2846,7 @@ GameObject:
   - component: {fileID: 821768113}
   m_Layer: 0
   m_Name: slime (3)
-  m_TagString: slime
+  m_TagString: slime2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2860,11 +2860,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 821768112}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90deaf08f3de45d49a310acd93b9c63a, type: 3}
+  m_Script: {fileID: 11500000, guid: eea50ab8261bca44695e9cbbc027d70d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ani: {fileID: 821768114}
-  health: 50
+  health: 100
 --- !u!95 &821768114
 Animator:
   serializedVersion: 3
@@ -2972,7 +2972,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 27d24438fe8f2c343bbb48c64bc46d4d, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.91764706, g: 0.039215688, b: 0.039215688, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3408,7 +3408,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1061637003}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f31ba80d81780ee43a259abd6cc5c748, type: 3}
+  m_Script: {fileID: 11500000, guid: f6937aada9bc1c7489da5f17a3ad9441, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   slime: {fileID: 702356139}
@@ -3822,7 +3822,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1246194393}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f31ba80d81780ee43a259abd6cc5c748, type: 3}
+  m_Script: {fileID: 11500000, guid: f6937aada9bc1c7489da5f17a3ad9441, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   slime: {fileID: 1451819683}
@@ -4106,7 +4106,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1355870887}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f31ba80d81780ee43a259abd6cc5c748, type: 3}
+  m_Script: {fileID: 11500000, guid: f6937aada9bc1c7489da5f17a3ad9441, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   slime: {fileID: 821768112}
@@ -4168,7 +4168,7 @@ GameObject:
   - component: {fileID: 1388157767}
   m_Layer: 0
   m_Name: slime (2)
-  m_TagString: slime
+  m_TagString: slime2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4182,11 +4182,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1388157766}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90deaf08f3de45d49a310acd93b9c63a, type: 3}
+  m_Script: {fileID: 11500000, guid: eea50ab8261bca44695e9cbbc027d70d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ani: {fileID: 1388157768}
-  health: 50
+  health: 100
 --- !u!95 &1388157768
 Animator:
   serializedVersion: 3
@@ -4294,7 +4294,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 27d24438fe8f2c343bbb48c64bc46d4d, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.91764706, g: 0.039215688, b: 0.039215688, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4336,7 +4336,7 @@ GameObject:
   - component: {fileID: 1451819684}
   m_Layer: 0
   m_Name: slime (1)
-  m_TagString: slime
+  m_TagString: slime2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4350,11 +4350,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1451819683}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90deaf08f3de45d49a310acd93b9c63a, type: 3}
+  m_Script: {fileID: 11500000, guid: eea50ab8261bca44695e9cbbc027d70d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ani: {fileID: 1451819685}
-  health: 50
+  health: 100
 --- !u!95 &1451819685
 Animator:
   serializedVersion: 3
@@ -4462,7 +4462,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 27d24438fe8f2c343bbb48c64bc46d4d, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.91764706, g: 0.039215688, b: 0.039215688, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4783,7 +4783,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1591436707}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f31ba80d81780ee43a259abd6cc5c748, type: 3}
+  m_Script: {fileID: 11500000, guid: f6937aada9bc1c7489da5f17a3ad9441, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   slime: {fileID: 262384984}
@@ -5271,7 +5271,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1829944997}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f31ba80d81780ee43a259abd6cc5c748, type: 3}
+  m_Script: {fileID: 11500000, guid: f6937aada9bc1c7489da5f17a3ad9441, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   slime: {fileID: 636728918}

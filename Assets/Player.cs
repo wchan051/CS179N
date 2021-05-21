@@ -116,6 +116,13 @@ public class Player : MonoBehaviour
                 iframe = false;
             }
         }
+		else if (collision.gameObject.tag == "slime2") {
+            if (iframe) {
+				Debug.Log("hit by slime 2");
+                TakeDamage(10);
+                iframe = false;
+            }
+        }
 
         if (hpregencounter > 900) {
             hpregencounter = 0;
@@ -124,13 +131,22 @@ public class Player : MonoBehaviour
     }
 
 	void OnTriggerEnter2D(Collider2D col)
-	{
+	{	
 		if (col.gameObject.tag == "slime")
 		{
 			testing = true;
 			enemy = col.gameObject.GetComponent<Animator>();
 			if(col.gameObject.GetComponent<slimeScript>().health > 0 && !enemy.GetBool("isHit")) {
 				col.gameObject.GetComponent<slimeScript>().health -= damage;
+			}
+			StartCoroutine(waiter());
+		}
+		if (col.gameObject.tag == "slime2")
+		{
+			testing = true;
+			enemy = col.gameObject.GetComponent<Animator>();
+			if(col.gameObject.GetComponent<slime2>().health > 0 && !enemy.GetBool("isHit")) {
+				col.gameObject.GetComponent<slime2>().health -= damage;
 			}
 			StartCoroutine(waiter());
 		}
