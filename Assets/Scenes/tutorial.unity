@@ -10719,6 +10719,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8be24c71036f9964791d6fc0e37a7ffc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onCollider: 0
 --- !u!1 &123626338
 GameObject:
   m_ObjectHideFlags: 0
@@ -11912,6 +11913,7 @@ MonoBehaviour:
   levelText: {fileID: 1581900828}
   xpText: {fileID: 271679895}
   questTracker: {fileID: 859194012}
+  enemy: {fileID: 0}
 --- !u!1 &594501871
 GameObject:
   m_ObjectHideFlags: 0
@@ -13662,6 +13664,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8be24c71036f9964791d6fc0e37a7ffc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onCollider: 0
 --- !u!1 &1206523281
 GameObject:
   m_ObjectHideFlags: 0
@@ -16390,6 +16393,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8be24c71036f9964791d6fc0e37a7ffc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onCollider: 0
 --- !u!1 &1767995662
 GameObject:
   m_ObjectHideFlags: 0
@@ -16832,7 +16836,7 @@ MonoBehaviour:
   backgrounds:
   - {fileID: 1997251600}
   - {fileID: 1669134753}
-  smoothing: 8
+  smoothing: 4
 --- !u!1 &1996862466
 GameObject:
   m_ObjectHideFlags: 0

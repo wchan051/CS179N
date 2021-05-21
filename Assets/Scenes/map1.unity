@@ -4721,7 +4721,7 @@ MonoBehaviour:
   backgrounds:
   - {fileID: 630431193}
   - {fileID: 389261914}
-  smoothing: 8
+  smoothing: 4
 --- !u!4 &1506606142
 Transform:
   m_ObjectHideFlags: 0
