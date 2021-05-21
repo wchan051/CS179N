@@ -128,8 +128,10 @@ public class Player : MonoBehaviour
 		if (col.gameObject.tag == "slime")
 		{
 			testing = true;
-			col.gameObject.GetComponent<slimeScript>().health -= damage;
 			enemy = col.gameObject.GetComponent<Animator>();
+			if(col.gameObject.GetComponent<slimeScript>().health > 0 && !enemy.GetBool("isHit")) {
+				col.gameObject.GetComponent<slimeScript>().health -= damage;
+			}
 			StartCoroutine(waiter());
 		}
 	}

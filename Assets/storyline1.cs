@@ -42,20 +42,20 @@ public class storyline1 : MonoBehaviour
 			delay = 0.005f;
 		}*/
         if (!showingText) { 
-			if(done4 ==1 && Input.GetKeyDown("space"))
+			if(done4 ==1 && Input.GetKeyDown(KeyCode.Return))
 			{
 				this.GetComponent<Text>().text = "";
 				typing = false;
 			}
-			else if (done3 == 1 && Input.GetKeyDown("space"))
+			else if (done3 == 1 && Input.GetKeyDown(KeyCode.Return))
 			{
 				StartCoroutine(ShowText(t4));
 			}
-			else if (done2 == 1 && Input.GetKeyDown("space"))
+			else if (done2 == 1 && Input.GetKeyDown(KeyCode.Return))
 			{
 				StartCoroutine(ShowText(t3));
 			}
-			else if (done1 == 1 && Input.GetKeyDown("space"))
+			else if (done1 == 1 && Input.GetKeyDown(KeyCode.Return))
 			{
 				StartCoroutine(ShowText(t2));
 			}
