@@ -5,7 +5,8 @@ using UnityEngine.Tilemaps;
 
 public class downJump : MonoBehaviour
 {
-    public bool onCollider = false;
+    public bool onCollider ;
+    public GameObject platform;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,16 +19,28 @@ public class downJump : MonoBehaviour
         
     }
 
-    void OnColliderStay(Collider other)
+    void OnTriggerStay2D(Collider2D other)
     {
-        onCollider = true;
+        
         if (other.tag == "Player")
         {
-            if(Input.GetKeyDown(KeyCode.LeftAlt) && Input.GetKeyDown(KeyCode.DownArrow))
+            
+            if (Input.GetKey(KeyCode.LeftAlt) && Input.GetKey(KeyCode.DownArrow))
             {
-                GetComponent<TilemapCollider2D>().enabled = false;
+                onCollider = true;
+                platform.GetComponent<TilemapCollider2D>().enabled = false;
             }
         }
     }
 
+    void OnTriggerExit2d(Collider2D other)
+    {
+        if (other.tag == "Player")
+        {
+
+            
+                platform.GetComponent<TilemapCollider2D>().enabled = true;
+            
+        }
+    }
 }
