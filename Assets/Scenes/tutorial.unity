@@ -11943,6 +11943,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff837e4c590a6e41ad4a1ba96044841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fiveSlimeQuest: 0
   healthBar: {fileID: 537603474}
   xpBar: {fileID: 1105171813}
   testing: 0
@@ -12479,11 +12480,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 928951895}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9927ab1fff5318d48887447055b0d9f6, type: 3}
+  m_Script: {fileID: 11500000, guid: eef401e2dbc93dc47bd26631bc7c1dbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   touched: 0
   spacedown: 0
+  questDone: 0
 --- !u!1 &954566540
 GameObject:
   m_ObjectHideFlags: 0

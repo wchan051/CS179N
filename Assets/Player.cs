@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+	public bool fiveSlimeQuest = false;
 	public HealthBar healthBar;
 	public XpBar xpBar;
 	public bool testing = false;
@@ -200,6 +201,7 @@ public class Player : MonoBehaviour
 	}
 	
 	void QuestComplete () {
+		fiveSlimeQuest = true;
 		questTracker.GetComponent<Text>().text = "Quest complete! 50 Xp has been rewarded!";
 	}
 	IEnumerator waiter() {
