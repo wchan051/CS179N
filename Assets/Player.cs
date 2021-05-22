@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-	public bool fiveSlimeQuest = false;
+	public int fiveSlimeQuest = 0;
 	public HealthBar healthBar;
 	public XpBar xpBar;
 	public bool testing = false;
@@ -36,6 +36,14 @@ public class Player : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
     {
+		
+
+		if (PlayerPrefs.GetInt("questFinished") == 1 && SceneManager.GetActiveScene().buildIndex== 2)
+        {
+			transform.position = new Vector3(71, -2, 0);
+		}
+		
+
 		healthBar.SetMaxHealth(maxHealth);
 		xpBar.SetMaxXp(maxXp);
 		if(SceneManager.GetActiveScene().name == "tutorial") {
@@ -201,7 +209,8 @@ public class Player : MonoBehaviour
 	}
 	
 	void QuestComplete () {
-		fiveSlimeQuest = true;
+		fiveSlimeQuest = 1;
+		PlayerPrefs.SetInt("questFinished", 1);
 		questTracker.GetComponent<Text>().text = "Quest complete! 50 Xp has been rewarded!";
 	}
 	IEnumerator waiter() {

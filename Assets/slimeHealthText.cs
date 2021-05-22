@@ -16,7 +16,7 @@ public class slimeHealthText : MonoBehaviour
     void Update()
     {
         this.GetComponent<Text>().text = slime.GetComponent<slimeScript>().health.ToString();
-        transform.position = slime.transform.position + new Vector3 (8f,0,0);
+        transform.position = slime.transform.position + new Vector3 (11.8f,0,0);
         
     }
 }
