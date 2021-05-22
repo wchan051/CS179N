@@ -1,5 +1,7 @@
 using System;
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 #pragma warning disable 649
 namespace UnityStandardAssets._2D
@@ -14,12 +16,16 @@ namespace UnityStandardAssets._2D
 
         private Transform m_GroundCheck;    // A position marking where to check if the player is grounded.
         const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
-        private bool m_Grounded;            // Whether or not the player is grounded.
+        public bool m_Grounded;            // Whether or not the player is grounded.
         private Transform m_CeilingCheck;   // A position marking where to check for ceilings
         const float k_CeilingRadius = .01f; // Radius of the overlap circle to determine if the player can stand up
         private Animator m_Anim;            // Reference to the player's animator component.
         private Rigidbody2D m_Rigidbody2D;
         private bool m_FacingRight = false;  // For determining which way the player is currently facing.
+        bool downJumping = false;
+        public bool c;
+        public bool j;
+        int player, platform;
 
         private void Awake()
         {
@@ -28,7 +34,8 @@ namespace UnityStandardAssets._2D
             m_CeilingCheck = transform.Find("CeilingCheck");
             m_Anim = GetComponent<Animator>();
             m_Rigidbody2D = GetComponent<Rigidbody2D>();
-            
+            player = LayerMask.NameToLayer("Player");
+            platform = LayerMask.NameToLayer("Platform");
         }
 
 
@@ -64,6 +71,8 @@ namespace UnityStandardAssets._2D
                     crouch = true;
                 }
             }
+            c = crouch;
+            j = jump;
 
             // Set whether or not the character is crouching in the animator
             m_Anim.SetBool("Crouch", crouch);
@@ -96,13 +105,18 @@ namespace UnityStandardAssets._2D
                 }
             }
             // If the player should jump...
-            if (m_Grounded && jump && m_Anim.GetBool("Ground"))
+            if (m_Grounded && jump && m_Anim.GetBool("Ground") && !m_Anim.GetBool("Crouch"))
             {
                 // Add a vertical force to the player.
                 m_Grounded = false;
                 m_Anim.SetBool("Ground", false);
                 m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
             }
+
+            /*if (m_Grounded && crouch && jump && !downJumping)
+            {
+                StartCoroutine("downJump");
+            }*/
 
             if(attack)
             {
@@ -115,6 +129,8 @@ namespace UnityStandardAssets._2D
             }
 
         }
+
+        
 
 
         private void Flip()
