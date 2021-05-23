@@ -26,11 +26,11 @@ public class opTextScript : MonoBehaviour
 
 	void Update()
 	{
-		if (Input.GetKeyDown(KeyCode.Return))
+		if (Input.GetKeyDown(KeyCode.Space))
 		{
 			delay = 0.005f;
 		}
-        if (done && Input.GetKeyDown(KeyCode.Return))
+        if (done && Input.GetKeyDown(KeyCode.Space))
         {
 			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 		}
