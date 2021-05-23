@@ -61,15 +61,7 @@ public class storyline1 : MonoBehaviour
 			}
 		}
 
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-			PlayerPrefs.SetInt("done1" ,0);
-			PlayerPrefs.SetInt("done2", 0);
-			PlayerPrefs.SetInt("done3", 0);
-			PlayerPrefs.SetInt("done4", 0);
-			PlayerPrefs.SetInt("questFinished", 0);
-			//PlayerPrefs.SetInt("done4", 0);
-		}
+        
 	}
 
 	IEnumerator ShowText(string temp)

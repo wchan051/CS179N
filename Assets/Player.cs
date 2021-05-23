@@ -38,10 +38,8 @@ public class Player : MonoBehaviour
     {
 		
 
-		if (PlayerPrefs.GetInt("questFinished") == 1 && SceneManager.GetActiveScene().buildIndex== 2)
-        {
-			transform.position = new Vector3(71, -2, 0);
-		}
+		transform.position = new Vector3(PlayerPrefs.GetFloat("xPosition"), PlayerPrefs.GetFloat("yPosition"), 0);
+		
 		
 
 		healthBar.SetMaxHealth(maxHealth);
@@ -117,7 +115,20 @@ public class Player : MonoBehaviour
 			questcounter = 0;
 			Invoke("QuestComplete", 2);
 		}
-    }
+
+		if (Input.GetKeyDown(KeyCode.R))
+		{
+			PlayerPrefs.SetInt("done1", 0);
+			PlayerPrefs.SetInt("done2", 0);
+			PlayerPrefs.SetInt("done3", 0);
+			PlayerPrefs.SetInt("done4", 0);
+			PlayerPrefs.SetInt("questFinished", 0);
+			PlayerPrefs.SetFloat("xPosition", 0);
+			PlayerPrefs.SetFloat("yPosition", 0);
+			//PlayerPrefs.SetInt("done4", 0);
+		}
+
+	}
 	private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.tag == "slime") {
             if (iframe) {

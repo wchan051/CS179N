@@ -3,22 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class firstPortal : MonoBehaviour
+public class portalLmap2 : MonoBehaviour
 {
     public bool touched = false;
     public bool spacedown = false;
-    float xPosition = 0f;
-    public int questDone = 0;
     void OnTriggerStay2D(Collider2D other)
     {
         //touched = true;
 
-        if (other.gameObject.tag == "Player" && spacedown && questDone==1)
+        if (other.gameObject.tag == "Player" && spacedown)
         {
-            //xPosition = GameObject.Find("CharacterRobotBoy").transform.position.x;
-            PlayerPrefs.SetFloat("xPosition", -17.92f);
-            PlayerPrefs.SetFloat("yPosition", -8.18f);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            PlayerPrefs.SetFloat("xPosition", 71);
+            PlayerPrefs.SetFloat("yPosition", -8.416365f);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
             touched = true;
         }
 
@@ -26,17 +23,12 @@ public class firstPortal : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        questDone= PlayerPrefs.GetInt("questFinished");
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(questDone == 0)
-        {
-            questDone = GameObject.Find("CharacterRobotBoy").GetComponent<Player>().fiveSlimeQuest;
-        }
-        
         if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow))
         {
             spacedown = true;
