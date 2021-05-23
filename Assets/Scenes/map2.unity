@@ -494,6 +494,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickedUp: 0
+  swordd: {fileID: 147818248}
 --- !u!61 &147818250
 BoxCollider2D:
   m_ObjectHideFlags: 0
