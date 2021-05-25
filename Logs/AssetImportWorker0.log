@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.5f1 (8095aa901b9b) revision 8426922'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Home; OS build 19042.985; Version 2009; 64bit' Language: 'en' Physical Memory: 16310 MB
+OS: 'Windows 10 Home; OS build 19041.985; Version 2004; 64bit' Language: 'en' Physical Memory: 16335 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
@@ -11,274 +11,338 @@ C:\Program Files\Unity\Hub\Editor\2020.3.5f1\Editor\Unity.exe
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/bunni/Documents/GitHub/CS179N
+C:/Users/JoshD/Documents/GitHub/CS179N2
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-51700
-Successfully changed project path to: C:/Users/bunni/Documents/GitHub/CS179N
-C:/Users/bunni/Documents/GitHub/CS179N
+62540
+Successfully changed project path to: C:/Users/JoshD/Documents/GitHub/CS179N2
+C:/Users/JoshD/Documents/GitHub/CS179N2
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 41.11 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 58.25 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.5f1 (8095aa901b9b)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/bunni/Documents/GitHub/CS179N/Assets
+[Subsystems] Discovering subsystems at path C:/Users/JoshD/Documents/GitHub/CS179N2/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce RTX 2060 (ID=0x1e89)
+    Renderer: NVIDIA GeForce GTX 1080 (ID=0x1b80)
     Vendor:   
-    VRAM:     5968 MB
-    Driver:   27.21.14.6109
+    VRAM:     8079 MB
+    Driver:   27.21.14.5671
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56212
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56032
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001477 seconds.
+Registered in 0.002725 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 40.86 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 56.28 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.830 seconds
+- Completed reload, in  1.252 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.000695 seconds.
+Registered in 0.001384 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 41.25 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 57.56 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.717 seconds
+- Completed reload, in  1.081 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Refreshing native plugins compatible for Editor in 0.48 ms, found 1 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.56 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2015 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 101.4 MB.
-System memory in use after: 101.2 MB.
+System memory in use after: 101.1 MB.
 
 Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 2467.
-Total: 2.105800 ms (FindLiveObjects: 0.190000 ms CreateObjectMapping: 0.052600 ms MarkObjects: 1.617800 ms  DeleteObjects: 0.244700 ms)
+Total: 2.752100 ms (FindLiveObjects: 0.269200 ms CreateObjectMapping: 0.058900 ms MarkObjects: 2.037400 ms  DeleteObjects: 0.384600 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Scenes/MainMenu.unity
-  artifactKey: Guid(822fe1fcfb9d2034ca8e10912f3451c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/MainMenu.unity using Guid(822fe1fcfb9d2034ca8e10912f3451c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b6bf391d13201a0b3f96091c385daa9') in 0.015158 seconds
-  Import took 0.018157 seconds .
+  path: Assets/monsters/slime/stand_2.png
+  artifactKey: Guid(7f06559609b26d644b1148d84f3adbec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/monsters/slime/stand_2.png using Guid(7f06559609b26d644b1148d84f3adbec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3cbe9d16714600e355b11c568d1c2216') in 0.152191 seconds
+  Import took 0.156646 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.001123 seconds.
-  path: Assets/Scenes/MainMenu.unity
-  artifactKey: Guid(822fe1fcfb9d2034ca8e10912f3451c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/MainMenu.unity using Guid(822fe1fcfb9d2034ca8e10912f3451c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b6bf391d13201a0b3f96091c385daa9') in 0.001686 seconds
-  Import took 0.004098 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000836 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.50 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.641 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.50 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1972 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 97.6 MB.
-System memory in use after: 97.3 MB.
-
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 2471.
-Total: 1.916800 ms (FindLiveObjects: 0.231200 ms CreateObjectMapping: 0.050300 ms MarkObjects: 1.383500 ms  DeleteObjects: 0.250800 ms)
+  Time since last request: 0.000437 seconds.
+  path: Assets/monsters/slime/hit1_0.png
+  artifactKey: Guid(a3f8de3f82cd49d4c8aa606c674a8869) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/monsters/slime/hit1_0.png using Guid(a3f8de3f82cd49d4c8aa606c674a8869) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39efbf9fa9a471047176b47de5f372a1') in 0.022005 seconds
+  Import took 0.025325 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 18.793441 seconds.
-  path: Assets/Scenes/cutscene.unity
-  artifactKey: Guid(91459a8bf92f79b4a8bfd5594fb73da2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/cutscene.unity using Guid(91459a8bf92f79b4a8bfd5594fb73da2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '568ecb82823a7ffb555ef88fa8479f2f') in 0.013935 seconds
-  Import took 0.016902 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000818 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.49 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.629 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.48 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1972 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 97.6 MB.
-System memory in use after: 97.4 MB.
-
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 2475.
-Total: 1.896400 ms (FindLiveObjects: 0.197200 ms CreateObjectMapping: 0.050200 ms MarkObjects: 1.396900 ms  DeleteObjects: 0.251100 ms)
+  Time since last request: 0.000353 seconds.
+  path: Assets/monsters/slime
+  artifactKey: Guid(774f0a3e198ca3a4b9fa14db9727d98d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/monsters/slime using Guid(774f0a3e198ca3a4b9fa14db9727d98d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e880a9eeb8ba9ccfe1295ab76267eda') in 0.007431 seconds
+  Import took 0.010945 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 93.393999 seconds.
-  path: Assets/Scenes/cutscene.unity
-  artifactKey: Guid(91459a8bf92f79b4a8bfd5594fb73da2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/cutscene.unity using Guid(91459a8bf92f79b4a8bfd5594fb73da2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71f6e26c18509a50befbab1f2c3f8de3') in 0.013575 seconds
-  Import took 0.016581 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000838 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.48 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.625 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.50 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1972 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 97.7 MB.
-System memory in use after: 97.4 MB.
-
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 2479.
-Total: 1.950300 ms (FindLiveObjects: 0.194400 ms CreateObjectMapping: 0.055200 ms MarkObjects: 1.404700 ms  DeleteObjects: 0.295100 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000904 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.54 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.637 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.51 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1972 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 97.7 MB.
-System memory in use after: 97.4 MB.
-
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 2483.
-Total: 1.968900 ms (FindLiveObjects: 0.204500 ms CreateObjectMapping: 0.053400 ms MarkObjects: 1.423900 ms  DeleteObjects: 0.286300 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000916 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.48 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.634 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.47 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1972 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 97.7 MB.
-System memory in use after: 97.4 MB.
-
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 2487.
-Total: 1.875500 ms (FindLiveObjects: 0.191700 ms CreateObjectMapping: 0.043300 ms MarkObjects: 1.344400 ms  DeleteObjects: 0.295500 ms)
+  Time since last request: 0.000258 seconds.
+  path: Assets/monsters/slime/move_4.png
+  artifactKey: Guid(35513886b6aab8341bfbfe054d0ba56b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/monsters/slime/move_4.png using Guid(35513886b6aab8341bfbfe054d0ba56b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8d09aca76981ff190c9890581d68431') in 0.022367 seconds
+  Import took 0.025984 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 62.067701 seconds.
-  path: Assets/storyline1.cs
-  artifactKey: Guid(91037758d0863d448b32354c09883c7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/storyline1.cs using Guid(91037758d0863d448b32354c09883c7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ef5d9e68c753ddc61762b993022ecab') in 0.015997 seconds
-  Import took 0.018684 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000810 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.49 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.629 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.49 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1972 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 97.7 MB.
-System memory in use after: 97.4 MB.
-
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 2491.
-Total: 1.836200 ms (FindLiveObjects: 0.192900 ms CreateObjectMapping: 0.045800 ms MarkObjects: 1.310500 ms  DeleteObjects: 0.285800 ms)
+  Time since last request: 0.000232 seconds.
+  path: Assets/mainmenu/Blank-Nut-Button.jpg
+  artifactKey: Guid(aa3abdbd26419674e8fa6fdd5c627d64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/mainmenu/Blank-Nut-Button.jpg using Guid(aa3abdbd26419674e8fa6fdd5c627d64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10d63f742a7f1b82541e6f0d1fff8097') in 0.075106 seconds
+  Import took 0.078669 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 13.926263 seconds.
-  path: Assets/storyline1.cs
-  artifactKey: Guid(91037758d0863d448b32354c09883c7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/storyline1.cs using Guid(91037758d0863d448b32354c09883c7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f10420970ba12269ac9d1ba1a5da2240') in 0.004016 seconds
-  Import took 0.006845 seconds .
+  Time since last request: 0.000488 seconds.
+  path: Assets/monsters/slime/jump_0.png
+  artifactKey: Guid(3beeaef3b3489d04198a8da16f6d1a04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/monsters/slime/jump_0.png using Guid(3beeaef3b3489d04198a8da16f6d1a04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a75eab57bceac3c2a4a0775871ecaa7b') in 0.060599 seconds
+  Import took 0.064162 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.028021 seconds.
-  path: Assets/storyline1.cs
-  artifactKey: Guid(91037758d0863d448b32354c09883c7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/storyline1.cs using Guid(91037758d0863d448b32354c09883c7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f10420970ba12269ac9d1ba1a5da2240') in 0.001435 seconds
-  Import took 0.004431 seconds .
+  Time since last request: 0.000249 seconds.
+  path: Assets/monsters/slime/move_6.png
+  artifactKey: Guid(ff9a1d51afedc57409bfa15322c47595) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/monsters/slime/move_6.png using Guid(ff9a1d51afedc57409bfa15322c47595) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0bfd28cb82e757a6338fddaf6febfa53') in 0.031739 seconds
+  Import took 0.036889 seconds .
 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000761 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.49 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.623 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.48 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1972 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 97.8 MB.
-System memory in use after: 97.5 MB.
-
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 2495.
-Total: 2.226000 ms (FindLiveObjects: 0.206500 ms CreateObjectMapping: 0.054900 ms MarkObjects: 1.602800 ms  DeleteObjects: 0.360300 ms)
+Received Import Request.
+  Time since last request: 0.000315 seconds.
+  path: Assets/monsters/slime/stand_0.png
+  artifactKey: Guid(27d24438fe8f2c343bbb48c64bc46d4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/monsters/slime/stand_0.png using Guid(27d24438fe8f2c343bbb48c64bc46d4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfacdfe6efac55c19c5df65763091271') in 0.017459 seconds
+  Import took 0.021992 seconds .
 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000814 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.51 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.644 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.49 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1972 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 97.8 MB.
-System memory in use after: 97.5 MB.
+Received Import Request.
+  Time since last request: 0.000275 seconds.
+  path: Assets/monsters/slime/move_0.png
+  artifactKey: Guid(7c16cfdf860ea3446aa7335ceabd5305) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/monsters/slime/move_0.png using Guid(7c16cfdf860ea3446aa7335ceabd5305) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19179b7e4428996b6b61ae46daa78438') in 0.040356 seconds
+  Import took 0.045246 seconds .
 
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 2499.
-Total: 2.112000 ms (FindLiveObjects: 0.166500 ms CreateObjectMapping: 0.049500 ms MarkObjects: 1.609700 ms  DeleteObjects: 0.285500 ms)
+========================================================================
+Received Import Request.
+  Time since last request: 0.000273 seconds.
+  path: Assets/monsters/slime/stand_1.png
+  artifactKey: Guid(2f5c2b7211465fd489323c7a4156f9ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/monsters/slime/stand_1.png using Guid(2f5c2b7211465fd489323c7a4156f9ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ad5a73899ad0896b6dcd537715e4484') in 0.029807 seconds
+  Import took 0.035117 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000304 seconds.
+  path: Assets/monsters/slime/die1_0.png
+  artifactKey: Guid(34ddfcafd77e5034c8d316acc7c643d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/monsters/slime/die1_0.png using Guid(34ddfcafd77e5034c8d316acc7c643d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab0c7955b86f6b085c793c1c2043ff00') in 0.030095 seconds
+  Import took 0.035005 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000222 seconds.
+  path: Assets/monsters/slime/move_1.png
+  artifactKey: Guid(5970d5207980db64fafe2626785c1e73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/monsters/slime/move_1.png using Guid(5970d5207980db64fafe2626785c1e73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85d18df33c8014bbfdee81c488630749') in 0.025435 seconds
+  Import took 0.029443 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000261 seconds.
+  path: Assets/monsters/slime/move_2.png
+  artifactKey: Guid(3be0aa40621b9ee4c8ca43231657261f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/monsters/slime/move_2.png using Guid(3be0aa40621b9ee4c8ca43231657261f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca62ec43e799b7c478b4d64cf0ce3e26') in 0.021577 seconds
+  Import took 0.025000 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000223 seconds.
+  path: Assets/monsters/slime/die1_2.png
+  artifactKey: Guid(f2f34266932f068479e103fe14972ead) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/monsters/slime/die1_2.png using Guid(f2f34266932f068479e103fe14972ead) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c71f6fde318203de82a100604c0b9f5') in 0.019947 seconds
+  Import took 0.023557 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000222 seconds.
+  path: Assets/Health/Heart.png
+  artifactKey: Guid(669fb4bb398e9e0469edd78a43d89229) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Health/Heart.png using Guid(669fb4bb398e9e0469edd78a43d89229) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ffae0448e1b6f7e54fdab084e00f7aa') in 0.012393 seconds
+  Import took 0.015680 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000207 seconds.
+  path: Assets/monsters/slime/move_3.png
+  artifactKey: Guid(c30862dc4a9cb10479a28c0c51665f83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/monsters/slime/move_3.png using Guid(c30862dc4a9cb10479a28c0c51665f83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '887743e7f93fd0650c044e3b7d8a00ff') in 0.020725 seconds
+  Import took 0.024086 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000210 seconds.
+  path: Assets/monsters/slime/move_5.png
+  artifactKey: Guid(46f953fd320dd0941920bb7a1360826e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/monsters/slime/move_5.png using Guid(46f953fd320dd0941920bb7a1360826e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05529d2968292d65ccb8535869994030') in 0.023701 seconds
+  Import took 0.027345 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000172 seconds.
+  path: Assets/mainmenu/start.png
+  artifactKey: Guid(39a9ca83378e52c439ab71690fe94973) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/mainmenu/start.png using Guid(39a9ca83378e52c439ab71690fe94973) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2cbf28dc6cb390d4a01601d840c5edf6') in 0.031114 seconds
+  Import took 0.034209 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000192 seconds.
+  path: Assets/monsters/slime/die1_3.png
+  artifactKey: Guid(508217b29338f6c4aa80b4be270ad3d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/monsters/slime/die1_3.png using Guid(508217b29338f6c4aa80b4be270ad3d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1db6d87d437d8f1500372259ffa2a78') in 0.021383 seconds
+  Import took 0.024748 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000190 seconds.
+  path: Assets/monsters/slime/die1_1.png
+  artifactKey: Guid(341d1c80168b3294ab65710f8a7deb9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/monsters/slime/die1_1.png using Guid(341d1c80168b3294ab65710f8a7deb9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd14398af66db6c63aace57de7f179a0c') in 0.020484 seconds
+  Import took 0.024086 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000199 seconds.
+  path: Assets/Health/Bar.png
+  artifactKey: Guid(7738e71eae249ad47972a91c1c57d9b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Health/Bar.png using Guid(7738e71eae249ad47972a91c1c57d9b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebc15b2a52e85ca1ff29dacb898c1689') in 0.012646 seconds
+  Import took 0.016577 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.751202 seconds.
+  path: Assets/monsters/slime/die.anim
+  artifactKey: Guid(d51e88b2be8b0c5429ef02eb9a94523f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/monsters/slime/die.anim using Guid(d51e88b2be8b0c5429ef02eb9a94523f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '996b6bd18463a4276e42e9ac279d7915') in 0.017756 seconds
+  Import took 0.022966 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.005221 seconds.
+  path: Assets/monsters/slime/die.anim
+  artifactKey: Guid(d51e88b2be8b0c5429ef02eb9a94523f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/monsters/slime/die.anim using Guid(d51e88b2be8b0c5429ef02eb9a94523f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '996b6bd18463a4276e42e9ac279d7915') in 0.003239 seconds
+  Import took 0.006890 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.208268 seconds.
+  path: Assets/monsters/slime/hit.anim
+  artifactKey: Guid(39c6405a9b0858b47b643c3e15ba4d2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/monsters/slime/hit.anim using Guid(39c6405a9b0858b47b643c3e15ba4d2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c94b36e0627e7e12be83622dbd225864') in 0.008136 seconds
+  Import took 0.012336 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001479 seconds.
+  path: Assets/monsters/slime/hit.anim
+  artifactKey: Guid(39c6405a9b0858b47b643c3e15ba4d2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/monsters/slime/hit.anim using Guid(39c6405a9b0858b47b643c3e15ba4d2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c94b36e0627e7e12be83622dbd225864') in 0.003598 seconds
+  Import took 0.007234 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 68.308564 seconds.
+  path: Assets/monsters/slime/mesop.png
+  artifactKey: Guid(3346fd381a3d0ae41bb50f7bee85b2dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/monsters/slime/mesop.png using Guid(3346fd381a3d0ae41bb50f7bee85b2dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '278deeed505b46e64510907ffec28b7f') in 0.014296 seconds
+  Import took 0.020224 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001970 seconds.
+  path: Assets/monsters/slime/mesop.png
+  artifactKey: Guid(3346fd381a3d0ae41bb50f7bee85b2dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/monsters/slime/mesop.png using Guid(3346fd381a3d0ae41bb50f7bee85b2dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '278deeed505b46e64510907ffec28b7f') in 0.009017 seconds
+  Import took 0.012921 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 114.807545 seconds.
+  path: Assets/mesop.png
+  artifactKey: Guid(749b8d4b126609c4a84b48da43a94c60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/mesop.png using Guid(749b8d4b126609c4a84b48da43a94c60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd28f44e7a16539761cabcf5c198403af') in 0.008212 seconds
+  Import took 0.012109 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.022306 seconds.
+  path: Assets/mesop.png
+  artifactKey: Guid(749b8d4b126609c4a84b48da43a94c60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/mesop.png using Guid(749b8d4b126609c4a84b48da43a94c60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd28f44e7a16539761cabcf5c198403af') in 0.008600 seconds
+  Import took 0.012343 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 214.120078 seconds.
+  path: Assets/mesop.png
+  artifactKey: Guid(40f16d0628203d74fbaefdcd87a34acc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/mesop.png using Guid(40f16d0628203d74fbaefdcd87a34acc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd63885877f6f0424f5c94b1f2f70dd71') in 0.010037 seconds
+  Import took 0.014064 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 31.810298 seconds.
+  path: Assets/mesop.png
+  artifactKey: Guid(40f16d0628203d74fbaefdcd87a34acc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/mesop.png using Guid(40f16d0628203d74fbaefdcd87a34acc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbccffba1fbacd526c7384153176e2b4') in 0.008740 seconds
+  Import took 0.012412 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 50.295409 seconds.
+  path: Assets/monsters/slime/move.anim
+  artifactKey: Guid(0c47eeeda2e388e46bdb4d526ccf97ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/monsters/slime/move.anim using Guid(0c47eeeda2e388e46bdb4d526ccf97ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34385adaee52c0dd547f04b1261da5f1') in 0.009592 seconds
+  Import took 0.013238 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001341 seconds.
+  path: Assets/monsters/slime/move.anim
+  artifactKey: Guid(0c47eeeda2e388e46bdb4d526ccf97ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/monsters/slime/move.anim using Guid(0c47eeeda2e388e46bdb4d526ccf97ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34385adaee52c0dd547f04b1261da5f1') in 0.003277 seconds
+  Import took 0.006363 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 80.787933 seconds.
+  path: Assets/monsters/slime/mesop.png
+  artifactKey: Guid(749b8d4b126609c4a84b48da43a94c60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/monsters/slime/mesop.png using Guid(749b8d4b126609c4a84b48da43a94c60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45b5f39383610c41e8ab8e48505e0356') in 0.015554 seconds
+  Import took 0.020022 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001723 seconds.
+  path: Assets/monsters/slime/mesop.png
+  artifactKey: Guid(749b8d4b126609c4a84b48da43a94c60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/monsters/slime/mesop.png using Guid(749b8d4b126609c4a84b48da43a94c60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45b5f39383610c41e8ab8e48505e0356') in 0.009584 seconds
+  Import took 0.013419 seconds .
 

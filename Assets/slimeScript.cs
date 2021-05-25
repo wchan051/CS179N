@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public bool drops;
+public GameObject theDrops;
+public Transform dropPoint;
+
 public class slimeScript : MonoBehaviour
 {
     public Animator ani; 
@@ -48,7 +52,9 @@ public class slimeScript : MonoBehaviour
 
         if (health <= 0)
         {
+            if (drops) Instantiate(theDrops, dropPoint.position, dropPoint.rotation);
             StartCoroutine(waiter());
+            
 
         }
     }
