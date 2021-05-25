@@ -2,9 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public bool drops;
-public GameObject theDrops;
-public Transform dropPoint;
 
 public class slimeScript : MonoBehaviour
 {
@@ -13,6 +10,7 @@ public class slimeScript : MonoBehaviour
     public int health = 50;
     private bool iframe, deadquestionmark;
     private int fpscounter;
+    public GameObject lootDrop;
     Player user;
     Vector3 respawnposition;
     // public int player-experience;
@@ -52,7 +50,7 @@ public class slimeScript : MonoBehaviour
 
         if (health <= 0)
         {
-            if (drops) Instantiate(theDrops, dropPoint.position, dropPoint.rotation);
+            Instantiate(lootDrop, transform.position, Quaternion.identity);
             StartCoroutine(waiter());
             
 
