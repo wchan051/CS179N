@@ -50,7 +50,7 @@ public class slimeScript : MonoBehaviour
 
         if (health <= 0)
         {
-            Instantiate(lootDrop, transform.position, Quaternion.identity);
+            //Instantiate(lootDrop, transform.position, Quaternion.identity);
             StartCoroutine(waiter());
             
 
@@ -78,6 +78,7 @@ public class slimeScript : MonoBehaviour
         if(health <= 0 && !deadquestionmark) {
             deadquestionmark = true;
             ani.SetBool("isDead", true);
+            Instantiate(lootDrop, transform.position, Quaternion.identity);
             user.GainXp(11);
             user.questcounterincrementer(1);
             yield return new WaitForSeconds(2);
