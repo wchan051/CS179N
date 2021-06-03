@@ -9,6 +9,7 @@ public class slime2 : MonoBehaviour
     public int health = 100;
     private bool iframe, deadquestionmark;
     private int fpscounter;
+    public GameObject lootDrop;
     Player user;
     Vector3 respawnposition;
     // public int player-experience;
@@ -21,7 +22,7 @@ public class slime2 : MonoBehaviour
         user = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         enemy = gameObject.transform.gameObject;
         enemyclone = gameObject.transform.gameObject;
-        respawnposition = new Vector3(11,-4,0);
+        respawnposition = this.transform.position;
         deadquestionmark = false;
     }
 
@@ -41,6 +42,9 @@ public class slime2 : MonoBehaviour
         if(health <= 0 && !deadquestionmark) {
             deadquestionmark = true;
             ani.SetBool("isDead", true);
+            if (Random.Range(0,10) > 5) {
+                Instantiate(lootDrop, transform.position, Quaternion.identity);
+            }
             user.GainXp(11);
             user.questcounterincrementer(1);
             yield return new WaitForSeconds(2);

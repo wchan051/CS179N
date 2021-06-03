@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
 	static public int maxXp = 10;
 	static public int currentXp;
     static public int level;
-	int damage = 10;
+	int damage;
 	public float vExpMod = 1.3f;
 	private int hpregencounter;
 
@@ -49,13 +49,14 @@ public class Player : MonoBehaviour
 			level = 1;
         	currentXp = 0;
 			totalXp = 0;
+			damage = 10;
 		}
 		else {
 			currentHealth = PlayerPrefs.GetInt("p_currentHealth");
 			level = PlayerPrefs.GetInt("p_level");
         	currentXp = PlayerPrefs.GetInt("p_currentXp");
 			totalXp = PlayerPrefs.GetInt("p_totalXp");
-		
+			damage = PlayerPrefs.GetInt("p_damage");
 		}
 		hpregencounter = 0;
 		iframe = false;
@@ -74,7 +75,7 @@ public class Player : MonoBehaviour
 		PlayerPrefs.SetInt("p_currentXp",currentXp);
 		PlayerPrefs.SetInt("p_totalXp",totalXp);
 		PlayerPrefs.SetInt("p_maxXp",maxXp);
-
+		PlayerPrefs.SetInt("p_damage",damage);
 		xpText.GetComponent<Text>().text = currentXp +  "	/	 "  + maxXp;
 		xpBar.SetXp(currentXp);
 		//Used for debugging(take 10 damage)
@@ -157,7 +158,12 @@ public class Player : MonoBehaviour
 			testing = true;
 			enemy = col.gameObject.GetComponent<Animator>();
 			if(col.gameObject.GetComponent<slimeScript>().health > 0 && !enemy.GetBool("isHit")) {
-				col.gameObject.GetComponent<slimeScript>().health -= damage;
+				if(col.gameObject.GetComponent<slimeScript>().health - damage < 0) {
+					col.gameObject.GetComponent<slimeScript>().health = 0;
+				}
+				else {
+					col.gameObject.GetComponent<slimeScript>().health -= damage;
+				}
 			}
 			StartCoroutine(waiter());
 		}
@@ -166,7 +172,12 @@ public class Player : MonoBehaviour
 			testing = true;
 			enemy = col.gameObject.GetComponent<Animator>();
 			if(col.gameObject.GetComponent<slime2>().health > 0 && !enemy.GetBool("isHit")) {
-				col.gameObject.GetComponent<slime2>().health -= damage;
+				if(col.gameObject.GetComponent<slime2>().health - damage < 0) {
+					col.gameObject.GetComponent<slime2>().health = 0;
+				}
+				else {
+					col.gameObject.GetComponent<slime2>().health -= damage;
+				}
 			}
 			StartCoroutine(waiter());
 		}
@@ -201,6 +212,7 @@ public class Player : MonoBehaviour
 		maxHealth += 25;
 		healthBar.SetMaxHealth(maxHealth);
 		currentHealth = maxHealth;
+		damage += 5;
         //TO-DO: Add level up animation
     }
 

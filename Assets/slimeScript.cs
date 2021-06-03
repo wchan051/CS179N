@@ -24,7 +24,7 @@ public class slimeScript : MonoBehaviour
         user = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         enemy = gameObject.transform.gameObject;
         enemyclone = gameObject.transform.gameObject;
-        respawnposition = new Vector3(11,-4,0);
+        respawnposition = this.transform.position;
         deadquestionmark = false;
     }
 
@@ -78,7 +78,9 @@ public class slimeScript : MonoBehaviour
         if(health <= 0 && !deadquestionmark) {
             deadquestionmark = true;
             ani.SetBool("isDead", true);
-            Instantiate(lootDrop, transform.position, Quaternion.identity);
+            if (Random.Range(0,10) > 9) {
+                Instantiate(lootDrop, transform.position, Quaternion.identity);
+            }
             user.GainXp(11);
             user.questcounterincrementer(1);
             yield return new WaitForSeconds(2);
