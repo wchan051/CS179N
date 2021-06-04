@@ -81,7 +81,7 @@ public class slimeScript : MonoBehaviour
             user.GainXp(11);
             user.questcounterincrementer(1);
             yield return new WaitForSeconds(2);
-            if (Random.Range(0,10) > 9) {
+            if (Random.Range(0,10) > 4) {
                 Instantiate(lootDrop, transform.position, Quaternion.identity);
             }
             enemy.gameObject.SetActive(false);
