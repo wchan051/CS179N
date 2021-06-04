@@ -11,6 +11,7 @@ public class slime3 : MonoBehaviour
     private int fpscounter;
     Player user;
     Vector3 respawnposition;
+    public GameObject projectile;
     // public int player-experience;
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,7 @@ public class slime3 : MonoBehaviour
         enemyclone = gameObject.transform.gameObject;
         respawnposition = this.transform.position;
         deadquestionmark = false;
+        projectile = GameObject.FindGameObjectWithTag("projectile").gameObject;
     }
 
     // Update is called once per frame
@@ -33,7 +35,14 @@ public class slime3 : MonoBehaviour
         if (health <= 0)
         {
             StartCoroutine(waiter());
+        }
 
+        if (fpscounter%300 == 0) {
+            SpriteRenderer flip = projectile.GetComponent<SpriteRenderer>();
+            if (user.transform.position.x <= enemy.transform.position.x) flip.flipX = false;
+            else flip.flipX = true;
+            GameObject proj = (GameObject)Instantiate(projectile);
+            proj.transform.position = new Vector3(transform.position.x - .4f, transform.position.y + .2f, -1);
         }
     }
 

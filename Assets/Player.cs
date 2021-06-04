@@ -178,6 +178,14 @@ public class Player : MonoBehaviour
             }
         }
 
+		else if (collision.gameObject.tag == "projectile") {
+			Debug.Log("hit a proj");
+			if (iframe) {
+				TakeDamage(15);
+				iframe = false;
+			}
+		}
+
         if (hpregencounter > 900) {
             hpregencounter = 0;
             iframe = true;   
