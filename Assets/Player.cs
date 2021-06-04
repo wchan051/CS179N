@@ -39,6 +39,7 @@ public class Player : MonoBehaviour
 	private bool iframe;
 	Animator m_Anim;
 	public Animator enemy; 
+	public GameObject memefireball;
 	// Start is called before the first frame update
 	void Start()
     {
@@ -83,6 +84,7 @@ public class Player : MonoBehaviour
 			passiveTracker.GetComponent<Text>().text = "Collect Mesop - " + mesop + "  /  	1000";
 		else if (activeQuest == "bossfight")
 			finalboss.GetComponent<Text>().text = "SURVIVE or kill the legendary flying slime";
+		memefireball = GameObject.FindGameObjectWithTag("Fire").gameObject;
 	}
 
     // Update is called once per frame
@@ -118,9 +120,19 @@ public class Player : MonoBehaviour
 			Heal(20);
 		}
 
-		if (Input.GetKeyDown(KeyCode.Q))
+		if (Input.GetKeyDown(KeyCode.G))
 		{
 			pickuppassive(100);
+		}
+
+		if (Input.GetKeyDown(KeyCode.E)/* && PlayerPrefs.GetInt("questFinish") == 2 && activeQuest == "bossfight"*/) {
+			GetComponent<Animator>().Play("shoot");
+			//yield return new WaitForSeconds(1); //idk if needed or not
+			SpriteRenderer flip = memefireball.GetComponent<SpriteRenderer>();
+			if (GameObject.FindGameObjectWithTag("Player").transform.position.x < GameObject.FindGameObjectWithTag("boss").transform.position.x) flip.flipX = true;
+			else flip.flipX = false;
+			GameObject fire = (GameObject)Instantiate(memefireball);
+			fire.transform.position = new Vector3(transform.position.x + 2f, transform.position.y + .2f, -1); //FIXME
 		}
 
 		if(Input.GetKeyDown(KeyCode.Q)) { 
@@ -179,7 +191,6 @@ public class Player : MonoBehaviour
         }
 
 		else if (collision.gameObject.tag == "projectile") {
-			Debug.Log("hit a proj");
 			if (iframe) {
 				TakeDamage(15);
 				iframe = false;

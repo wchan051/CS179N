@@ -42,7 +42,7 @@ public class slime3 : MonoBehaviour
             if (user.transform.position.x <= enemy.transform.position.x) flip.flipX = false;
             else flip.flipX = true;
             GameObject proj = (GameObject)Instantiate(projectile);
-            proj.transform.position = new Vector3(transform.position.x - .4f, transform.position.y + .2f, -1);
+            proj.transform.position = new Vector3(transform.position.x - .4f, transform.position.y + .2f, -1); //FIXME
         }
     }
 

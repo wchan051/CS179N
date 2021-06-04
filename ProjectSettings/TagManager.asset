@@ -8,6 +8,8 @@ TagManager:
   - slime2
   - Fire
   - boss
+  - projectile
+  - ground
   layers:
   - Default
   - TransparentFX
