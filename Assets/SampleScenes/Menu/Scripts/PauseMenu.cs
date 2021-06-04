@@ -8,6 +8,10 @@ public class PauseMenu : MonoBehaviour
 	private float m_TimeScaleRef = 1f;
     private float m_VolumeRef = 1f;
     private bool m_Paused;
+    public static bool GameIsPaused = false;
+    public GameObject pauseMenuUI;
+
+
 
 
     void Awake()
@@ -49,15 +53,36 @@ public class PauseMenu : MonoBehaviour
     }
 
 
-#if !MOBILE_INPUT
+
 	void Update()
 	{
-		if(Input.GetKeyUp(KeyCode.Escape))
+		if(Input.GetKeyDown(KeyCode.Escape))
 		{
-		    m_MenuToggle.isOn = !m_MenuToggle.isOn;
-            Cursor.visible = m_MenuToggle.isOn;//force the cursor visible if anythign had hidden it
+		    if (GameIsPaused)
+            {
+                Resume();
+            }
+            else
+            {
+                Pause();
+            }
+
 		}
 	}
-#endif
+
+    void Resume()
+    {
+        pauseMenuUI.SetActive(false);
+        Time.timeScale = 1f;
+        GameIsPaused = false;
+    }
+
+    void Pause()
+    {
+        pauseMenuUI.SetActive(true);
+        Time.timeScale = 0f;
+        GameIsPaused = true;
+    }
+
 
 }
