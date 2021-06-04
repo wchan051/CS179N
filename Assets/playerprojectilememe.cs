@@ -7,13 +7,14 @@ public class playerprojectilememe : MonoBehaviour
     // Start is called before the first frame update
     Rigidbody2D rb2d;
     Player player;
-    GameObject slime;
+    slime3 slime;
+    public Animator enemy;
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         rb2d = GetComponent<Rigidbody2D>();
-        slime = GameObject.FindGameObjectWithTag("boss").gameObject;
+        slime = GameObject.FindGameObjectWithTag("boss").GetComponent<slime3>();
     }
 
     // Update is called once per frame
@@ -36,13 +37,11 @@ public class playerprojectilememe : MonoBehaviour
     // }
 
     private void OnCollisionEnter2D(Collision2D collision) {
-        //if (collision.gameObject.tag == "boss") {
-        //     player.Heal(-10);
-            destroyproj();
-        //}
         if (collision.gameObject.tag == "boss") {
-            // TODO: REDUCE SLIME HEALTH
+        //     player.Heal(-10);
+            slime.projhit(40);
         }
+        destroyproj();
     }
 
     private void destroyproj() {

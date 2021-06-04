@@ -15,15 +15,15 @@ public class slime3HealthText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (slime.transform.localScale == new Vector3(-3.0f, 3.0f, 1.0f)) {
+        if (slime.transform.localScale == new Vector3(-20.0f, 20.0f, 1.0f)) {
             this.GetComponent<Text>().text = slime.GetComponent<slime3>().health.ToString();
-            transform.localScale = new Vector3 (-1.0f, 1.0f, 1.0f);
-            transform.position = slime.transform.position + new Vector3 (6.8f,0,0);    
+            transform.localScale = new Vector3 (-0.5f, .5f, 1.0f);
+            transform.position = slime.transform.position + new Vector3 (22.8f,0,0);    
         }
         else {
-            transform.localScale = new Vector3 (1.0f, 1.0f, 1.0f);
+            transform.localScale = new Vector3 (.5f, .5f, 1.0f);
             this.GetComponent<Text>().text = slime.GetComponent<slime3>().health.ToString();
-            transform.position = slime.transform.position + new Vector3 (9.8f,0,0);
+            transform.position = slime.transform.position + new Vector3 (43.8f,0,0);
         }
     }
 }

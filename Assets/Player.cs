@@ -323,4 +323,7 @@ public class Player : MonoBehaviour
 		yield return new WaitForSeconds(1);
 		enemy.SetBool("isHit",false);
 	}
+	public void damagemodifier(int damagemodif) {
+		damage += damagemodif;
+	}
 }

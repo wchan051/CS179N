@@ -28,6 +28,8 @@ public class pickedUpSword : MonoBehaviour
         if (other.tag == "Player")
         {
             pickedUp = true;
+            //Player player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+            //player.damagemodifier(50);
             anim = other.GetComponent<Animator>();
             anim.SetBool("sword", true);
             anim.SetInteger("damage", anim.GetInteger("damage") +50);

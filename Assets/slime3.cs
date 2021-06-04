@@ -37,12 +37,16 @@ public class slime3 : MonoBehaviour
             StartCoroutine(waiter());
         }
 
-        if (fpscounter%300 == 0) {
+        if (fpscounter%1000 == 0) {
             SpriteRenderer flip = projectile.GetComponent<SpriteRenderer>();
             if (user.transform.position.x <= enemy.transform.position.x) flip.flipX = false;
             else flip.flipX = true;
             GameObject proj = (GameObject)Instantiate(projectile);
             proj.transform.position = new Vector3(transform.position.x - .4f, transform.position.y + .2f, -1); //FIXME
+        }
+
+        if (fpscounter % 100 == 0 && ani.GetBool("isHit")) {
+            ani.SetBool("isHit", false);
         }
     }
 
@@ -58,6 +62,25 @@ public class slime3 : MonoBehaviour
         }   
     }
 
+    private void OncollisionEnter2D(Collision2D collision) {
+        if (collision.gameObject.tag == "Fire") {
+            ani.SetBool("isHit", true);
+            if (health - 100 < 0) {
+                health = 0;
+            }
+            else {
+                health = health - 100;
+            }
+        }
+    }
+    public void projhit(int basedamage) {
+        if (health - basedamage < 0) {
+            health = 0;
+        }
+        else {
+            health = health - basedamage;
+        }
+    }
     void respawn() {
         GameObject enemyrespawn = (GameObject)Instantiate(enemyclone);
         enemyrespawn.transform.position = respawnposition;
