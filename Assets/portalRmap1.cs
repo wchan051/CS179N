@@ -6,12 +6,13 @@ using UnityEngine.SceneManagement;
 public class portalRmap1 : MonoBehaviour
 {
     public bool touched = false;
+    public int questDone = 0;
     public bool spacedown = false;
     void OnTriggerStay2D(Collider2D other)
     {
         //touched = true;
 
-        if (other.gameObject.tag == "Player" && spacedown)
+        if (other.gameObject.tag == "Player" && spacedown && questDone == 2)
         {
             PlayerPrefs.SetFloat("xPosition", -17.33f);
             PlayerPrefs.SetFloat("yPosition", -6.32f);
@@ -29,6 +30,7 @@ public class portalRmap1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        questDone = PlayerPrefs.GetInt("questFinished");
         if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow))
         {
             spacedown = true;

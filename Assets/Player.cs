@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-	public int fiveSlimeQuest = 0;
+	// public int fiveSlimeQuest = 0;
+	// public int mesopQuest = 0;
 	public HealthBar healthBar;
 	public XpBar xpBar;
 	public bool testing = false;
@@ -257,7 +258,7 @@ public class Player : MonoBehaviour
 	}
 	
 	void QuestComplete () {
-		fiveSlimeQuest = 1;
+		//fiveSlimeQuest = 1;
 		PlayerPrefs.SetInt("questFinished", 1);
 		if (activeQuest == "kill")	questTracker.GetComponent<Text>().text = "Quest complete! 50 Xp has been rewarded!";
 	}
@@ -265,6 +266,10 @@ public class Player : MonoBehaviour
 		if (mesop % 50 == 0) {
 			if (activeQuest == "collect") passiveTracker.GetComponent<Text>().text = "Increased atk power by 1";
 			damage++;
+		}
+		if (mesop > 1000) {
+			//mesopQuest = 1;
+			PlayerPrefs.SetInt("questFinished", 2);
 		}
 	}
 	public void pickuppassive(int pickup) {

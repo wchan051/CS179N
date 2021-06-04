@@ -7,7 +7,7 @@ public class firstPortal : MonoBehaviour
 {
     public bool touched = false;
     public bool spacedown = false;
-    float xPosition = 0f;
+    //float xPosition = 0f;
     public int questDone = 0;
     void OnTriggerStay2D(Collider2D other)
     {
@@ -26,16 +26,18 @@ public class firstPortal : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        questDone= PlayerPrefs.GetInt("questFinished");
+        //questDone= PlayerPrefs.GetInt("questFinished");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(questDone == 0)
-        {
-            questDone = GameObject.Find("CharacterRobotBoy").GetComponent<Player>().fiveSlimeQuest;
-        }
+        questDone = PlayerPrefs.GetInt("questFinished");
+        // if(questDone == 1)
+        // {
+        //     //questDone = GameObject.Find("CharacterRobotBoy").GetComponent<Player>().fiveSlimeQuest;
+            
+        // }
         
         if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow))
         {
