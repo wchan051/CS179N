@@ -82,7 +82,7 @@ public class Player : MonoBehaviour
 		else if (activeQuest == "collect")
 			passiveTracker.GetComponent<Text>().text = "Collect Mesop - " + mesop + "  /  	1000";
 		else if (activeQuest == "bossfight")
-			finalboss.GetComponent<Text>().text = "SURVIVE or kill the boss";
+			finalboss.GetComponent<Text>().text = "SURVIVE or kill the legendary flying slime";
 	}
 
     // Update is called once per frame
@@ -97,11 +97,20 @@ public class Player : MonoBehaviour
 		PlayerPrefs.SetInt("p_mesop", mesop);
 		xpText.GetComponent<Text>().text = currentXp +  "	/	 "  + maxXp;
 		xpBar.SetXp(currentXp);
+
+		/*
 		//Used for debugging(take 10 damage)
 		if (Input.GetKeyDown(KeyCode.Z))
 		{
 			TakeDamage(10);
 		}
+		
+		//Used for debugging(gain 10 xp)
+		if(Input.GetKeyDown(KeyCode.X)) 
+		{
+            GainXp(10);
+        }
+		*/
 
 		//Replace with health potions
 		if (Input.GetKeyDown(KeyCode.C))
@@ -113,11 +122,6 @@ public class Player : MonoBehaviour
 		{
 			pickuppassive(100);
 		}
-
-		//Used for debugging(gain 10 xp)
-		if(Input.GetKeyDown(KeyCode.X)) {
-            GainXp(10);
-        }
 
 		if(Input.GetKeyDown(KeyCode.Q)) { 
             GetComponent<Animator>().Play("stab");
@@ -162,8 +166,14 @@ public class Player : MonoBehaviour
         }
 		else if (collision.gameObject.tag == "slime2") {
             if (iframe) {
-				Debug.Log("hit by slime 2");
                 TakeDamage(10);
+                iframe = false;
+            }
+        }
+
+		else if (collision.gameObject.tag == "boss") {
+            if (iframe) {
+                TakeDamage(25);
                 iframe = false;
             }
         }
@@ -200,6 +210,20 @@ public class Player : MonoBehaviour
 				}
 				else {
 					col.gameObject.GetComponent<slime2>().health -= damage;
+				}
+			}
+			StartCoroutine(waiter());
+		}
+		if (col.gameObject.tag == "boss")
+		{
+			testing = true;
+			enemy = col.gameObject.GetComponent<Animator>();
+			if(col.gameObject.GetComponent<slime3>().health > 0 && !enemy.GetBool("isHit")) {
+				if(col.gameObject.GetComponent<slime3>().health - damage < 0) {
+					col.gameObject.GetComponent<slime3>().health = 0;
+				}
+				else {
+					col.gameObject.GetComponent<slime3>().health -= damage;
 				}
 			}
 			StartCoroutine(waiter());
@@ -266,6 +290,7 @@ public class Player : MonoBehaviour
 		}
 		if (mesop > 1000) {
 			//mesopQuest = 1;
+			GainXp(250);
 			PlayerPrefs.SetInt("questFinished", 2);
 		}
 	}
