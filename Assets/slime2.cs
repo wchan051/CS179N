@@ -42,12 +42,12 @@ public class slime2 : MonoBehaviour
         if(health <= 0 && !deadquestionmark) {
             deadquestionmark = true;
             ani.SetBool("isDead", true);
+            user.GainXp(33);
+            user.questcounterincrementer(1);
+            yield return new WaitForSeconds(2);
             if (Random.Range(0,10) > 5) {
                 Instantiate(lootDrop, transform.position, Quaternion.identity);
             }
-            user.GainXp(11);
-            user.questcounterincrementer(1);
-            yield return new WaitForSeconds(2);
             enemy.gameObject.SetActive(false);
             Invoke("respawn", 5);
         }   

@@ -20,14 +20,18 @@ public class Player : MonoBehaviour
 	int damage;
 	public float vExpMod = 1.3f;
 	private int hpregencounter;
+	
 
 	//text overlay
 	public GameObject levelText;
 	public GameObject xpText;
 	public GameObject questTracker;
+	public GameObject passiveTracker;
+	private string activeQuest;
 
 	//quest
 	static public int questcounter; 
+	static public int mesop;
 
 	//misc
 	private bool iframe;
@@ -50,6 +54,7 @@ public class Player : MonoBehaviour
         	currentXp = 0;
 			totalXp = 0;
 			damage = 10;
+			mesop = 0;
 		}
 		else {
 			currentHealth = PlayerPrefs.GetInt("p_currentHealth");
@@ -57,6 +62,16 @@ public class Player : MonoBehaviour
         	currentXp = PlayerPrefs.GetInt("p_currentXp");
 			totalXp = PlayerPrefs.GetInt("p_totalXp");
 			damage = PlayerPrefs.GetInt("p_damage");
+			mesop = PlayerPrefs.GetInt("p_mesop");
+		}
+		if (SceneManager.GetActiveScene().name == "tutorial") {
+			activeQuest = "kill";
+		}
+		else if (SceneManager.GetActiveScene().name == "map1") {
+			activeQuest = "collect";
+		}
+		else {
+			activeQuest = "nothing";
 		}
 		hpregencounter = 0;
 		iframe = false;
@@ -64,7 +79,11 @@ public class Player : MonoBehaviour
 		questcounter = 0;
 		levelText.GetComponent<Text>().text = "Lvl. " +  level;
 		xpText.GetComponent<Text>().text = currentXp +  "	/	 "  + maxXp;
-		questTracker.GetComponent<Text>().text = "Kill the slimes -		" + questcounter +   "	/	 5" ;
+		if (activeQuest == "kill")
+			questTracker.GetComponent<Text>().text = "Kill the slimes -		" + questcounter +   "	/	 5" ;
+		else if (activeQuest == "collect")
+			passiveTracker.GetComponent<Text>().text = "Collect Mesop - " + mesop + "  /  	1000";
+
 	}
 
     // Update is called once per frame
@@ -76,6 +95,7 @@ public class Player : MonoBehaviour
 		PlayerPrefs.SetInt("p_totalXp",totalXp);
 		PlayerPrefs.SetInt("p_maxXp",maxXp);
 		PlayerPrefs.SetInt("p_damage",damage);
+		PlayerPrefs.SetInt("p_mesop", mesop);
 		xpText.GetComponent<Text>().text = currentXp +  "	/	 "  + maxXp;
 		xpBar.SetXp(currentXp);
 		//Used for debugging(take 10 damage)
@@ -88,6 +108,11 @@ public class Player : MonoBehaviour
 		if (Input.GetKeyDown(KeyCode.C))
 		{
 			Heal(20);
+		}
+
+		if (Input.GetKeyDown(KeyCode.Q))
+		{
+			pickuppassive(100);
 		}
 
 		//Used for debugging(gain 10 xp)
@@ -111,7 +136,7 @@ public class Player : MonoBehaviour
 			hpregencounter = 0;
 		}
 
-		if (questcounter >= 5) {
+		if (questcounter >= 5 && activeQuest == "kill") {
 			GainXp(50);
 			questcounter = 0;
 			Invoke("QuestComplete", 2);
@@ -198,7 +223,7 @@ public class Player : MonoBehaviour
 	}
 	public void questcounterincrementer(int counter) {
 		questcounter += counter;
-		questTracker.GetComponent<Text>().text = "Kill the slimes -		" + questcounter +   " 	/	 5" ;
+		if (activeQuest == "kill")	questTracker.GetComponent<Text>().text = "Kill the slimes -		" + questcounter +   " 	/	 5" ;
 	}
 
 	void LevelUp(int exp) {
@@ -234,7 +259,18 @@ public class Player : MonoBehaviour
 	void QuestComplete () {
 		fiveSlimeQuest = 1;
 		PlayerPrefs.SetInt("questFinished", 1);
-		questTracker.GetComponent<Text>().text = "Quest complete! 50 Xp has been rewarded!";
+		if (activeQuest == "kill")	questTracker.GetComponent<Text>().text = "Quest complete! 50 Xp has been rewarded!";
+	}
+	void upgradepassive() {
+		if (mesop % 50 == 0) {
+			if (activeQuest == "collect") passiveTracker.GetComponent<Text>().text = "Increased atk power by 1";
+			damage++;
+		}
+	}
+	public void pickuppassive(int pickup) {
+		mesop = mesop + pickup;
+		if (activeQuest == "collect")	passiveTracker.GetComponent<Text>().text = "Collect Mesop - " + mesop + "  /  	1000";
+		upgradepassive();
 	}
 	IEnumerator waiter() {
 		enemy.SetBool("isHit",true);

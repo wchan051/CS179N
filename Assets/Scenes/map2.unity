@@ -9810,6 +9810,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ani: {fileID: 415316397}
   health: 50
+  lootDrop: {fileID: 147818248}
 --- !u!95 &415316397
 Animator:
   serializedVersion: 3

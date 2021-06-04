@@ -78,12 +78,12 @@ public class slimeScript : MonoBehaviour
         if(health <= 0 && !deadquestionmark) {
             deadquestionmark = true;
             ani.SetBool("isDead", true);
-            if (Random.Range(0,10) > 9) {
-                Instantiate(lootDrop, transform.position, Quaternion.identity);
-            }
             user.GainXp(11);
             user.questcounterincrementer(1);
             yield return new WaitForSeconds(2);
+            if (Random.Range(0,10) > 9) {
+                Instantiate(lootDrop, transform.position, Quaternion.identity);
+            }
             enemy.gameObject.SetActive(false);
             Invoke("respawn", 5);
             // GameObject enemyrespawn = (GameObject)Instantiate(enemyclone);
