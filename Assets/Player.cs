@@ -28,6 +28,7 @@ public class Player : MonoBehaviour
 	public GameObject xpText;
 	public GameObject questTracker;
 	public GameObject passiveTracker;
+	public GameObject finalboss;
 	private string activeQuest;
 
 	//quest
@@ -41,11 +42,7 @@ public class Player : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
     {
-		
-
 		transform.position = new Vector3(PlayerPrefs.GetFloat("xPosition"), PlayerPrefs.GetFloat("yPosition"), 0);
-		
-		
 
 		healthBar.SetMaxHealth(maxHealth);
 		xpBar.SetMaxXp(maxXp);
@@ -71,8 +68,8 @@ public class Player : MonoBehaviour
 		else if (SceneManager.GetActiveScene().name == "map1") {
 			activeQuest = "collect";
 		}
-		else {
-			activeQuest = "nothing";
+		else if (SceneManager.GetActiveScene().name == "map2") {
+			activeQuest = "bossfight";
 		}
 		hpregencounter = 0;
 		iframe = false;
@@ -84,7 +81,8 @@ public class Player : MonoBehaviour
 			questTracker.GetComponent<Text>().text = "Kill the slimes -		" + questcounter +   "	/	 5" ;
 		else if (activeQuest == "collect")
 			passiveTracker.GetComponent<Text>().text = "Collect Mesop - " + mesop + "  /  	1000";
-
+		else if (activeQuest == "bossfight")
+			finalboss.GetComponent<Text>().text = "SURVIVE or kill the boss";
 	}
 
     // Update is called once per frame
@@ -154,7 +152,6 @@ public class Player : MonoBehaviour
 			PlayerPrefs.SetFloat("yPosition", 0);
 			//PlayerPrefs.SetInt("done4", 0);
 		}
-
 	}
 	private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.tag == "slime") {
@@ -215,7 +212,7 @@ public class Player : MonoBehaviour
 		healthBar.SetHealth(currentHealth);
 	}
 	
-	void Heal (int heal) {
+	public void Heal (int heal) {
 		currentHealth += heal;
 		if(currentHealth > maxHealth) {
 			currentHealth = maxHealth;
@@ -264,7 +261,7 @@ public class Player : MonoBehaviour
 	}
 	void upgradepassive() {
 		if (mesop % 50 == 0) {
-			if (activeQuest == "collect") passiveTracker.GetComponent<Text>().text = "Increased atk power by 1";
+			//if (activeQuest == "collect") passiveTracker.GetComponent<Text>().text = "Increased atk power by 1";
 			damage++;
 		}
 		if (mesop > 1000) {
@@ -282,5 +279,4 @@ public class Player : MonoBehaviour
 		yield return new WaitForSeconds(1);
 		enemy.SetBool("isHit",false);
 	}
-	
 }

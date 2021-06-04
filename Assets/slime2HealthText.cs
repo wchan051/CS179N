@@ -15,8 +15,15 @@ public class slime2HealthText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.GetComponent<Text>().text = slime.GetComponent<slime2>().health.ToString();
-        transform.position = slime.transform.position + new Vector3 (8f,0,0);
-        
+        if (slime.transform.localScale == new Vector3(-3.0f, 3.0f, 1.0f)) {
+            this.GetComponent<Text>().text = slime.GetComponent<slime2>().health.ToString();
+            transform.localScale = new Vector3 (-1.0f, 1.0f, 1.0f);
+            transform.position = slime.transform.position + new Vector3 (6.8f,0,0);    
+        }
+        else {
+            transform.localScale = new Vector3 (1.0f, 1.0f, 1.0f);
+            this.GetComponent<Text>().text = slime.GetComponent<slime2>().health.ToString();
+            transform.position = slime.transform.position + new Vector3 (9.8f,0,0);
+        }
     }
 }

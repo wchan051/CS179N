@@ -15,6 +15,7 @@ public class LootPickup : MonoBehaviour
         {
             Destroy(this.gameObject);
             player.pickuppassive(100);
+            if (Random.Range(0,10) > 5) player.Heal(20);
             //player.pickuppassive(-0.5f);
             Debug.Log("picked up");
         }
